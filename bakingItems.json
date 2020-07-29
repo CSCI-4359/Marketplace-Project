@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "5f20a8fc37aa007922085e61"
+  },
+  "title": "Red Star Original Instant Dry Quick Rise Yeast",
+  "img": "RedStarOriginalInstantDryQuickRiseYeast.jpg",
+  "size": "4 oz",
+  "price": 0.1,
+  "description": "For bread machines & traditional baking. Fast acting dry yeast for bread machines.",
+  "instructions": "Refrigerate or freeze after opening. Please refrigerate or freeze after opening. And use within 4 months after opening. Bread Machine Baking Tips: Use 1/2 tsp. Quick-Rise Yeast for each cup of flour. The suggested temperature for liquids is 80 degrees F for regular baking cycles. Follow manufacturer's directions for shorter cycles as warmer liquids may be required. Red Star QuickRise Yeast is great for traditional baking. Approximately 2-1/4 tsp. equal one 1/4 oz. yeast packet. Use a thermometer to determine liquid temperatures. Traditional Method: Dissolve 1 package of yeast in 1/4 cup of warm tap water (110-115 degrees F). Add 1/2 tsp. of sugar. Wait 5-10 minutes for mixture to foam (proof). Mixer Method: Blend yeast with flour and other dry ingredients. Warm liquids to 120-130 degrees F. Using liquids above 140 degrees F will harm the yeast.",
+  "ingredients": "Yeast, Sorbitan Monostearate, Ascorbic Acid.",
+  "quantity": 19
+},{
+  "_id": {
+    "$oid": "5f20aa8838d70854fadc95bf"
+  },
+  "title": "Red Star Active Dry Original Yeast",
+  "img": "RedStarActiveDryOriginalYeast.jpg",
+  "size": "4 oz",
+  "price": 0.1,
+  "description": "For traditional baking and bread machines. Use within 4 months after opening.",
+  "instructions": "Refrigerate or freeze after opening. Please refrigerate or freeze after opening. And use within 4 months after opening. Use a thermometer to determine liquid temperatures: Traditional Method: Dissolve 1 package of yeast in 1/4 cup of warm tap water (110-115 degrees F). Add 1/2 tsp. of sugar. Wait 5-10 minutes for mixture to foam (proof). Mixer Method: Blend yeast with flour and other dry ingredients. Warm liquids to 120-130 degrees F. Bread Machine: Use liquids at 80 degrees F.",
+  "ingredients": "Yeast, Sorbitan Monostearate.",
+  "quantity": 9
+},{
+  "_id": {
+    "$oid": "5f20c78938d70854fadc95c0"
+  },
+  "title": "Pioneer Brand Enriched All Purpose Flour",
+  "img": "PioneerFlour.jpg",
+  "size": "5 lb",
+  "price": 0.05,
+  "description": "Our flour and cornmeal bake up amazing homemade breads, the flakiest pie crusts and the most irresistible cakes and cookies. Pioneer® all-purpose flour is the perfect staple for all your baking needs. For more than 160 years, it's been a family baking secret that's been passed on from generation to generation",
+  "instructions": "NULL",
+  "ingredients": "Enriched Bleached Flour (wheat Flour, Niacin, Reduced Iron, Thiamin Mononitrate, Riboflavin, Folic Acid.",
+  "quantity": 31
+},{
+  "_id": {
+    "$oid": "5f2185b938d70854fadc95c1"
+  },
+  "title": "Clabber Girl Double Acting Baking Powder",
+  "img": "ClabberGirlDoubleActingBakingPowder.jpg",
+  "size": "8.1 oz",
+  "price": 0.1,
+  "description": "The dependable, balanced double-action of Clabber Girl Baking Powder has earned it a loyal following of home bakers and food industry professionals alike. The leavening action begins when the baking powder is mixed with moisture and again when heated in the oven. Carbon dioxide is released to leaven your baked goods and provide a moist crumb texture.",
+  "instructions": "Shake can before using.",
+  "ingredients": "Cornstarch, Sodium Bicarbonate, Sodium Aluminum Sulfate, Monocalcium Phosphate.",
+  "quantity": 27
+},{
+  "_id": {
+    "$oid": "5f21868638d70854fadc95c2"
+  },
+  "title": "Clabber Girl Multi Purpose Baking Soda",
+  "img": "ClabberGirlMultiPurposeBakingSoda.jpg",
+  "size": "12 oz",
+  "price": 0.5,
+  "description": "Clabber Girl Baking Soda makes a great leavening powder for your favorite recipes. This soda is also an environmentally safe dish and household cleaner. Sprinkle Clabber Girl Baking Soda over burnt-on food in pots and pans, let soak overnight, and scrub the next day. This soda removes dirt and grime from tile, tubs, floors, and counters as well.",
+  "instructions": "Baking: Use your favorite recipes or visit clabbergirl.com for great baking ideas. Cleaning: Non-abrasive: Clabber Girl Baking Soda safely cleans away grease and soil on microwaves, refrigerators, sinks, counters, dishwashers (between loads), pots and pans, cutting boards and food containers. Just sprinkle on a damp sponge or cloth, wipe and rinse. Deodorizing: Sprinkle straight from the can to naturally eliminate odors or apply to a damp sponge, wipe and rinse. Great for refrigerators, freezers, carpets, upholstery and automobiles.",
+  "ingredients": "NULL",
+  "quantity": 89
+}]
