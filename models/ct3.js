@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const bakingItemsSchema = new Schema ({
+const ct3Schema = new Schema ({
     title: {
         type: String,
         required: true
@@ -29,4 +29,4 @@ const bakingItemsSchema = new Schema ({
         type: Number
     }
 })
-module.exports = mongoose.model('bakingItems', bakingItemsSchema);
+module.exports = mongoose.model('ct3products', ct3Schema);

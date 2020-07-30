@@ -13,7 +13,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     ct1product.find()
         .then (result => {
-            res.render('index', {products: result, pageTitle: 'Homepage'});
+            res.render('index', {products: result, pageTitle: 'Homepage', pageName: 'Category 1'});
         })
         .catch(err => console.log(err));
 });
@@ -42,4 +42,11 @@ router.get('ct2', (req, res) => {
         .catch(err => console.log(err));
 });
 
+router.get('/ct1/:prodId', (req, res) => {
+    ct1product.findById(req.params.prodId)
+        .then (result => {
+            res.render('product-detail1', {prod: result, pageTitle: 'Product Detail', pageName: 'Category 1'});
+        })
+        .catch(err => console.log(err));
+});
 module.exports = router;
