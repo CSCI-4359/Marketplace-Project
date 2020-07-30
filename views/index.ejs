@@ -1,42 +1,27 @@
 <%- include('layouts/header.ejs') %>
-
 <%- include('layouts/navigation.ejs') %>
+<%- include('layouts/sidebar.ejs')%>
 
- <!-- Page Content -->
- <div class="container">    
-    <div class="row">
-        
-        <%- include('layouts/sidebar.ejs')%> 
-
-        <div class="col-lg-9">           
-            
-        <br><br>
-            <div class="row">                
-                <% for (let p of products) { %>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="/img/<%= p.img %>" alt="<%= p.title %>"></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#"><%= p.title %></a>
-                            </h4>
-                            <p><%= p.description %></p>
-                            <h5><%= p.price %></h5>                          
-
-                        </div>                                     
+<div id="page-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <% for (let p of products) { %>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="/assets/img/bakingItems/<%= p.img %>" alt="<%= p.title %>"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#"><%= p.title %></a>
+                        </h4>
+                        <h5><%= p.price %></h5>
                     </div>
                 </div>
-                <% } %>
             </div>
-            <!-- /.row -->
-
+            <% } %>
         </div>
-        <!-- /.col-lg-9 -->
-
+        <!-- /.row -->
     </div>
-    <!-- /.row -->
-
+    <!-- /.container -->
 </div>
-<!-- /.container -->
-
+<!-- /.wrapper -->
 <%- include('layouts/footer.ejs') %>
