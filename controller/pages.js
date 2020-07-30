@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 const ct1product = require('../models/ct1');
 const ct2product = require('../models/ct2');
+const ct3product = require('../models/ct3');
+const ct4product = require('../models/ct4');
+const ct5product = require('../models/ct5');
+const ct6product = require('../models/ct6');
 const Cart = require('../models/cart');
 
 const router = express.Router();
@@ -13,7 +17,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     ct1product.find()
         .then (result => {
-            res.render('index', {products: result, pageTitle: 'Homepage', pageName: 'Category 1'});
+            res.render('index', {products: result, pageTitle: 'Fresh Produce', pageName: 'Fresh Produce'});
         })
         .catch(err => console.log(err));
 });
@@ -77,7 +81,7 @@ router.get('/ct6', (req, res) => {
 router.get('/ct1/:prodId', (req, res) => {
     ct1product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail1', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 1'});
+            res.render('product-detail1', {prod: result, pageTitle: 'Items Detail', pageName: 'Fresh Produce'});
         })
         .catch(err => console.log(err));
 });
@@ -85,7 +89,7 @@ router.get('/ct1/:prodId', (req, res) => {
 router.get('/ct2/:prodId', (req, res) => {
     ct2product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail2', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 2'});
+            res.render('product-detail2', {prod: result, pageTitle: 'Items Detail', pageName: 'Cereal'});
         })
         .catch(err => console.log(err));
 });
@@ -93,7 +97,7 @@ router.get('/ct2/:prodId', (req, res) => {
 router.get('/ct3/:prodId', (req, res) => {
     ct3product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail3', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 3'});
+            res.render('product-detail3', {prod: result, pageTitle: 'Items Detail', pageName: 'Dairy'});
         })
         .catch(err => console.log(err));
 });
@@ -101,7 +105,7 @@ router.get('/ct3/:prodId', (req, res) => {
 router.get('/ct4/:prodId', (req, res) => {
     ct4product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail4', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 4'});
+            res.render('product-detail4', {prod: result, pageTitle: 'Items Detail', pageName: 'Everyday Items'});
         })
         .catch(err => console.log(err));
 });
@@ -109,7 +113,7 @@ router.get('/ct4/:prodId', (req, res) => {
 router.get('/ct5/:prodId', (req, res) => {
     ct5product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail5', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 5'});
+            res.render('product-detail5', {prod: result, pageTitle: 'Items Detail', pageName: 'Breakfast Items'});
         })
         .catch(err => console.log(err));
 });
@@ -117,7 +121,7 @@ router.get('/ct5/:prodId', (req, res) => {
 router.get('/ct6/:prodId', (req, res) => {
     ct6product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail6', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 6'});
+            res.render('product-detail6', {prod: result, pageTitle: 'Items Detail', pageName: 'Baking Items'});
         })
         .catch(err => console.log(err));
 });
