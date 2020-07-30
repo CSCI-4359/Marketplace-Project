@@ -4,6 +4,10 @@ const bodyParser = require('body-parser');
 
 const ct1product = require('../models/ct1');
 const ct2product = require('../models/ct2');
+const ct3product = require('../models/ct3');
+const ct4product = require('../models/ct4');
+const ct5product = require('../models/ct5');
+const ct6product = require('../models/ct6');
 const Cart = require('../models/cart');
 
 const router = express.Router();

@@ -18,7 +18,7 @@
                         <h4 class="card-title">
                             <a href="/ct6/<%=p._id%>"><%= p.title %></a>
                         </h4>
-                        <h5><%= p.price %></h5>
+                        <h5>$<%= p.price %></h5>
                         <form action="/add-cart" method="POST">
                             <input type="hidden" name="id" value="<%= p._id %>">
                             <input type="hidden" name="catId" value="cat6">
