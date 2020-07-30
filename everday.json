@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "5f2225ccbe0ffdd55309e2e5"
+  },
+  "title": "H‑E‑B Our Finest Ultra Soft Toilet Paper",
+  "img": "paper.jpg",
+  "size": "12 Mega Rolls",
+  "price": "0.5",
+  "description": "H‑E‑B Our Finest Ultra Soft Toilet Paper"
+},{
+  "_id": {
+    "$oid": "5f22298c4fbfbc03f7778c5a"
+  },
+  "title": "Clorox Clean-Up Fresh Cleaner & Bleach Spray",
+  "img": "clorox.jpg",
+  "size": "32 oz",
+  "price": "0.5",
+  "description": "Spray every drop! New Smart Tube technology. Disinfects. Removes stains. Removes bathroom stains. Removes stains & disinfects. Degreaser. Kills germs (staphylococcus aureus, salmonella enterica, cold virus (rhinovirus type 37), flu virus (influenza A2, Hong Kong) on hard, non-porous surfaces. Contains no phosphorus."
+},{
+  "_id": {
+    "$oid": "5f222a924fbfbc03f7778c5b"
+  },
+  "title": "Crest + Scope Complete Whitening Minty Fresh Striped Toothpaste",
+  "img": "crest.jpg",
+  "size": "5.4 oz",
+  "price": "0.5",
+  "description": "Get the freshness of Scope in a toothpaste. Crest + Scope Complete Whitening Toothpaste has the benefits of Crest toothpaste with the addition of Scope freshness. Kill millions of bad breath germs and leave your breath feeling minty and refreshed. Regular brushing with fluoride toothpaste helps prevent tooth decay by slowing the breakdown of enamel and increases the rate of the remineralization process. This toothpaste fights cavities and tartar build-up. This teeth whitening toothpaste gently removes surface stains to help whiten your teeth."
+},{
+  "_id": {
+    "$oid": "5f222b5e4fbfbc03f7778c5c"
+  },
+  "title": "H‑E‑B Unscented Pantiliners",
+  "img": "pantiliners.jpg",
+  "size": "64 ct",
+  "price": "0.1",
+  "description": "With soft cover. Compare to Kotex Lightdays Pantiliners (Kotex and Lightdays are registered trademarks of Kimberly-Clark Worldwide, Inc., distributor of Kotex Lightdays Pantiliners). With all-around barrier for increased protection against leakage. Contoured for a more comfortable fit. Quilted and soft coversheet for extra absorbency. Large adhesive zone secures the liner."
+},{
+  "_id": {
+    "$oid": "5f222bb14fbfbc03f7778c5d"
+  },
+  "title": "H‑E‑B Plastic Regular Unscented Tampons",
+  "img": "tampons.jpg",
+  "size": "18 ct",
+  "price": "0.1",
+  "description": "Sure Comfort. Compare to Kotex Security (This product is not manufactured or distributed by Kimberly‑Clark Worldwide, Inc., distributor of Kotex Security). Plastic applicator. A woman's flow will vary during her menstrual cycle. Choose the absorbencies that are right for you each day of your cycle. Light to Medium Flow Days: Regular. Comfortable & dependable. Comfort ‑ rounded tip plastic applicator with finger grips and smooth glide finish ensures easy, comfortable insertion. Leakage Protection ‑ special design adjusts and expands to fit your body, providing reliable and comfortable protection. Individually wrapped for your convenience. Absorbing Materials Contain: Rayon and/or cotton fiber blend. Polypropylene/polyethylene overwrap and cotton string. Tampons Absorbency Range: H‑E‑B Sure Comfort Plastic Applicator Tampons are available in three absorbency ranges. Tampon absorbency terms and ranges are regulated by the FDA. Regular: 6 g ‑ 9 g absorbency range. Made with pride and care for H‑E‑B. Made in Israel."
+}]
