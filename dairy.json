@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "5f2218ccbe0ffdd55309e2e3"
+  },
+  "title": "H‑E‑B Grade AA Cage Free Large Brown Eggs",
+  "img": "egg.jpg",
+  "size": "12ct",
+  "price": "0.1",
+  "description": "The Natural Start To Your Day. Build your breakfast taco right with H‑E‑B Cage Free Large Brown Eggs. The chickens that produced these all natural eggs were raised hormone and antibiotic free, and are able to roam free with unlimited access to food and water. So the eggs not only taste good, but you can also feel good about eating them!",
+  "instructions ": "Keep refrigerated at or below 45 degrees F. Safe Handling: To prevent illness from bacteria: keep eggs refrigerated, cook eggs until yolks are firm, and cook food containing eggs thoroughly.",
+  "ingredients ": "Brown Eggs"
+},{
+  "_id": {
+    "$oid": "5f2219a7be0ffdd55309e2e4"
+  },
+  "title": "H‑E‑B Select Ingredients Reduced Fat 2% Milk",
+  "img": "milk.jpg",
+  "size": "1 gal",
+  "price": "0.1",
+  "description": "Vitamin E enriched. 38% less fat than whole milk. Vitamin A, D & E. Our farmers pledge. No artificial growth hormones (FDA States: No significant difference between milk from cows treated or not treated with artificial growth hormones). 3-A-Day: milk, cheese, yogurt. Grade A, pasteurized, homogenized. 38% less fat than whole milk - fat reduced from 8 g to 5 g per serving. Product of USA.",
+  "ingredients ": "Reduced Fat Milk, Vitamin A Palmitate, Vitamin D3, Vitamin E."
+},{
+  "_id": {
+    "$oid": "5f221c2c4fbfbc03f7778c57"
+  },
+  "title": "Oatly The Original Oat Milk",
+  "img": "oatmilk.jpg",
+  "size": "1/2 gal",
+  "price": "0.50",
+  "description": "We just love this product. It’s made fresh from 100% gluten-free oats and enriched with calcium. It has amazing beta-glucans (big, scientific word for soluble fiber from oats), and is naturally low in saturated fat.",
+  "ingredients ": "Oatmilk (Water, Oats). Contains 2% or less of: Low Erucic Acid Rapeseed Oil, Dipotassium Phosphate, Calcium Carbonate, Tricalcium Phosphate, Sea Salt, Dicalcium Phosphate, Riboflavin, Vitamin A, Vitamin D2, Vitamin B12."
+},{
+  "_id": {
+    "$oid": "5f221cd84fbfbc03f7778c58"
+  },
+  "title": "H‑E‑B Select Ingredients Non‑Fat Plain Greek Yogurt",
+  "img": "yogurt.jpg",
+  "size": "32 oz",
+  "price": "0.1",
+  "description": "Whether you're using it as a base for your great cooking ideas or simply enjoying a cold, creamy bowl, our H\u001aE\u001aB Select Ingredients Plain Greek Yogurt is the perfect option for you. Mix into your favorite dips, baked goods, and salads for a unique twist on your favorite recipes.",
+  "ingredients ": "STRAINED YOGURT (CULTURED PASTEURIZED GRADE A FAT FREE MILK, LIVE AND ACTIVE CULTURES [S. THERMOPHILUS, L. BULGARICUS, L. ACIDOPHILUS, BIFIDUS AND L. CASEI])."
+},{
+  "_id": {
+    "$oid": "5f221d5f4fbfbc03f7778c59"
+  },
+  "title": "H‑E‑B Select Ingredients Medium Cheddar Cheese",
+  "img": "cheese.jpg",
+  "size": "16 oz",
+  "price": "0.1",
+  "description": "Cheddar deliciousness that's not too mild and not too sharp, made with no artificial ingredients. - Select Ingredients - Natural cheese - Aged over 3 months - Gluten free - No artificial growth hormones",
+  "ingredients ": "PASTEURIZED MILK, CHEESE CULTURE, SALT, ENZYMES (MICROBIAL), ANNATTO (COLOR)."
+}]
