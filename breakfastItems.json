@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "5f20a8fc37aa007922085e61"
+  },
+  "title": "Hill Country Fare Buttermilk Complete Pancake & Waffle Mix",
+  "img": "HillCountryFareButtermilkCompletePancake&WaffleMix.jpg",
+  "size": "32 oz",
+  "price": 0.05,
+  "description": "Good source of calcium! Just add water.",
+  "instructions": "PANCAKE DIRECTIONS: Pancakes 6-9 12-18 18-27 Mix 1 Cup 2 Cups 3 Cups Water 2/3 Cup 1 1/3 Cups 2 Cups For thicker pancakes use a little less water, for thinner pancakes use a little more water. 1. Heat skillet over medium-low heat or electric griddle to 375ºF. Skillet is ready when drops of water sizzle, then disappear almost immediately. 2. Combine mix and water in a bowl. Stir with wire whisk until large lumps disappear. Over mixing may toughen pancakes. 3. Pour slightly less than 1/4 cup batter for each pancake onto lightly greased skillet. 4. Turn when pancakes bubble and bottoms are golden brown. DO NOT CONSUME/EAT RAW BATTER. FOR WAFFLES: 1. Heat waffle iron. 2. Combine the following ingredients: 2 cups mix 1 1/3 cups water 1/3 cup oil 3. Stir until large lumps disappear; allow batter to rest 4-5 minutes before baking. 4. Pour desired amount of batter into lightly greased waffle iron. Bake until steaming stops.",
+  "ingredients": "ENRICHED BLEACHED FLOUR (BLEACHED WHEAT FLOUR, MALTED BARLEY FLOUR, NIACIN, IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), SUGAR, LEAVENING (BAKING SODA, SODIUM ALUMINUM PHOSPHATE, MONOCALCIUM PHOSPHATE), CONTAINS 2% OR LESS OF: SOYBEAN OIL, DEXTROSE, BUTTERMILK, EGG YOLK, SALT, CORN STARCH, EGG WHITE.",
+  "quantity": 19
+},{
+  "_id": {
+    "$oid": "5f20aa8838d70854fadc95bf"
+  },
+  "title": "Hill Country Fare Original Syrup",
+  "img": "HillCountryFareOriginalSyrup.jpg",
+  "size": "36 oz",
+  "price": 0.1,
+  "description": "Go Texan!",
+  "instructions": "NULL",
+  "ingredients": "CORN SYRUP, HIGH FRUCTOSE CORN SYRUP, WATER, ARTIFICIAL MAPLE FLAVOR, SALT, CELLULOSE GUM, SODIUM BENZOATE (PRESERVATIVE), SORBIC ACID (PRESERVATIVE).",
+  "quantity": 9
+},{
+  "_id": {
+    "$oid": "5f20c78938d70854fadc95c0"
+  },
+  "title": "H-E-B Select Ingredients Quick Oats",
+  "img": "H-E-BSelectIngredientsQuickOats.jpg",
+  "size": "42 oz",
+  "price": 0.05,
+  "description": "Made with 100% Whole Grain Oats.",
+  "instructions": "NULL",
+  "ingredients": "Heart Healthy Serving: Water (or Milk) 1 1/2 Cup Oats 3/4 Cup Salt (Optional) dash Servings 1: Water (or Milk) 1 Cup Oats 1/2 Cup Salt (Optional) dash Servings 2: Water (or Milk) 1 3/4 Cups Oats 1 Cup Salt (Optional) 1/8 tsp MICROWAVE 1 Serving: Water (or Milk) 1 Cup Oats 1/2 Cup Salt (Optional) dash Range Top Directions: 1. Bring water (or milk) and salt to a boil. Stir in oats. 2. Boil for 1 minute, over medium heat or until thickened. Stir occasionally. 3. Stir before serving. Microwave Directions: 1. For 1 serving, combine water (or milk), salt and oats in a medium microwave-safe bowl. 2. Microwave on HIGH for 1 1/2 to 2 minutes or until thickened. 3. Stir before serving. For thicker oatmeal use less water. For thinner oatmeal use more water. CAUTION: CONTENTS MAY BE HOT WHEN COMING OUT OF THE MICROWAVE.",
+  "quantity": 31
+},{
+  "_id": {
+    "$oid": "5f2185b938d70854fadc95c1"
+  },
+  "title": "Hill Country Fare Quick Grits",
+  "img": "HillCountryFareQuickGrits.jpg",
+  "size": "24 oz",
+  "price": 0.05,
+  "description": "Hill Country Fare Quick Grits are made of white hominy and cooks in 5 minutes!",
+  "instructions": "PREPARATION INSTRUCTIONS STOVE TOP: 1. Slowly stir grits and salt into briskly boiling water. 2. Reduce heat to medium-low and cover. 3. Cook 5 to 7 minutes or until thickened, stirring occasionally. 4. Remove from heat. SERVINGS WATER* (cups) GRITS (tbsp. / cup) SALT (optional) 1 1 3 tbsp. dash. 4 3 3/4 cup 1/4 tsp. 6 4 1 cup 1/2 tsp. MICROWAVE: One serving: 1. Combine water, grits, and salt in a 2 cup microwave-safe bowl and stir. 2. Microwave on HIGH 3 to 4 minutes or until thickened when stirred. Since microwave ovens vary in power, you may need to adjust your cooking time. CAUTION: Bowl and contents may be hot. SERVINGS WATER* (cup) GRITS (tbsp.) SALT (optional) 1 3/4 3 dash. * FOR THICKER GRITS, USE LESS WATER. FOR THINNER GRITS, USE MORE WATER.",
+  "ingredients": "CornstarchWHITE HOMINY CORN GRITS, NIACIN, REDUCED IRON, VITAMIN B1 (THIAMIN MONONITRATE), VITAMIN B2 (RIBOFLAVIN), FOLIC ACID., Sodium Bicarbonate, Sodium Aluminum Sulfate, Monocalcium Phosphate.",
+  "quantity": 27
+},{
+  "_id": {
+    "$oid": "5f21868638d70854fadc95c2"
+  },
+  "title": "Pioneer Brand Original Buttermilk Pancake & Waffle Mix",
+  "img": "PioneerBrandOriginalButtermilkPancake&WaffleMix.jpg",
+  "size": "32 oz",
+  "price": 0.05,
+  "description": "Delicious breakfasts with the homemade taste your family loves. Think you don't have the time? Now you do with fast-and-easy Pioneer pancake and waffle mixes. They're the hearty breakfast favorite that begins everyone's day with a smile. So start every day with the best – pancake mixes and waffle mixes from Pioneer.",
+  "instructions": "NULL",
+  "ingredients": "NULL",
+  "quantity": 89
+}]

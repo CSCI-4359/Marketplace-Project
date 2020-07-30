@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "5f20aa8838d70854fadc95bf"
+  },
+  "title": "Hill Country Fare Honey & Nut Toasted Oats Cereal",
+  "img": "HillCountryFareHoney&NutToastedOatsCereal.jpg",
+  "size": "32 oz",
+  "price": 0.15,
+  "description": "Hill Country Fare Honey & Nut Toasted O's is sweetened toasted oat cereal which provides 10 essential vitamins and minerals!",
+  "instructions": "Store in dry cool place. Lot number and sell by date: On package.",
+  "ingredients": "WHOLE OAT FLOUR, SUGAR, MODIFIED CORN STARCH, WHEAT GERM, HONEY, BROWN SUGAR, CONTAINS 2% OR LESS OF: OAT FIBER, SALT, ALMONDS, CANOLA OIL, ANNATTO EXTRACT (COLOR), CARAMEL COLOR. VITAMINS AND MINERALS: CALCIUM CARBONATE, TRIPOTASSIUM PHOSPHATE, VITAMIN C (SODIUM ASCORBATE), REDUCED IRON, VITAMIN B3 (NIACINAMIDE), VITAMIN A (PALMITATE), ZINC OXIDE, VITAMIN B6 (PYRIDOXINE HYDROCHLORIDE), VITAMIN B2 (RIBOFLAVIN), VITAMIN D (CHOLECALCIFEROL), VITAMIN B1 (THIAMINE HYDROCHLORIDE), FOLIC ACID, VITAMIN B12 (CYANOCOBALAMIN).",
+  "quantity": 9
+},{
+  "_id": {
+    "$oid": "5f20c78938d70854fadc95c0"
+  },
+  "title": "Hill Country Fare Frosted Wheat Puffs",
+  "img": "HillCountryFareFrostedWheatPuffs.jpg",
+  "size": "32 oz",
+  "price": 0.25,
+  "description": "Hill Country Fare Frosted Wheat Puffs is sweetened puffed wheat cereal which provides 7 essential vitamins and minerals!",
+  "instructions": "Store in dry cool place. Lot number and sell by date: On package.",
+  "ingredients": "SUGAR, DURUM WHEAT, CORN SYRUP, CONTAINS 2% OR LESS OF: HONEY, SALT, CARAMEL COLOR. VITAMINS AND MINERALS: VITAMIN C (SODIUM ASCORBATE), VITAMIN A (PALMITATE), IRON (FERRIC ORTHOPHOSPHATE), VITAMIN B3 (NIACINAMIDE), VITAMIN B1 (THIAMINE MONONITRATE), VITAMIN B6 (PYRIDOXINE HYDROCHLORIDE), VITAMIN B2 (RIBOFLAVIN), VITAMIN D (CHOLECALCIFEROL), FOLIC ACID.",
+  "quantity": 31
+},{
+  "_id": {
+    "$oid": "5f2185b938d70854fadc95c1"
+  },
+  "title": "Hill Country Fare Sugar Frosted Flakes Cereal",
+  "img": "HillCountryFareSugarFrostedFlakesCereal.jpg",
+  "size": "32 oz",
+  "price": 0.25,
+  "description": "Hill Country Fare Sugar Frosted Flakes cereal is a sweetened toasted corn cereal which provides 9 essential vitamins and minerals!",
+  "instructions": "Store in dry cool place.",
+  "ingredients": "DEGERMED YELLOW CORN MEAL, SUGAR, SALT, BARLEY MALT EXTRACT. VITAMINS AND MINERALS: VITAMIN C (SODIUM ASCORBATE, ASCORBIC ACID), IRON (FERROUS FUMARATE), VITAMIN A (PALMITATE), VITAMIN B3 (NIACINAMIDE), VITAMIN B1 (THIAMINE MONONITRATE), VITAMIN B6 (PYRIDOXINE HYDROCHLORIDE), VITAMIN B2 (RIBOFLAVIN), VITAMIN D (CHOLECALCIFEROL), VITAMIN B12 (CYANOCOBALAMIN), FOLIC ACID.",
+  "quantity": 27
+},{
+  "_id": {
+    "$oid": "5f21868638d70854fadc95c2"
+  },
+  "title": "Hill Country Fare Fruit & Frosted Rings Cereal",
+  "img": "ClabberGirlMultiPurposeBakingSoda.jpg",
+  "size": "32 oz",
+  "price": 0.25,
+  "description": "Hill Country Fare Fruit & Frosted Rings cereal is a sweetened multigrain cereal that provides 10 essential vitamins and minerals!",
+  "instructions": "Store in dry cool place. Lot number and sell by date: On package.",
+  "ingredients": "SUGAR, ENRICHED BLEACHED FLOUR (BLEACHED WHEAT FLOUR, NIACIN, IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), CORN FLOUR, WHOLE OAT FLOUR, BLUE 1, SALT, NATURAL FLAVOR, RED 40, TURMERIC OLEORESIN (COLOR), YELLOW 6, ANNATTO EXTRACT (COLOR). VITAMINS AND MINERALS: CALCIUM CARBONATE, VITAMIN C (SODIUM ASCORBATE), VITAMIN A (PALMITATE), VITAMIN B3 (NIACINAMIDE), ZINC OXIDE, REDUCED IRON, VITAMIN B12 (CYANOCOBALAMIN), VITAMIN D (CHOLECALCIFEROL), VITAMIN B6 (PYRIDOXINE HYDROCHLORIDE), VITAMIN B1 (THIAMINE HYDROCHLORIDE), VITAMIN B2 (RIBOFLAVIN), FOLIC ACID.",
+  "quantity": 89
+},{
+  "_id": {
+    "$oid": "5f22c8a3e2ed0210696ea85b"
+  },
+  "title": "Hill Country Fare Raisin Bran Cereal",
+  "img": "HillCountryFareRaisinBranCereal.jpg",
+  "size": "32 oz",
+  "price": 0.15,
+  "description": "Wheat bran cereal with raisins. Provides 13 essential vitamins & minerals.",
+  "instructions": "Store in a dry cool place. Sell by date: on package.",
+  "ingredients": "Wheat Bran, Raisins, Sugar, High Fructose Corn Syrup, Salt, Malt Extract. Vitamins and Minerals: Iron (Ferric Orthophosphate), Vitamin C (Sodium Ascorbate), Vitamin A (Palmitate), Niacinamide, Vitamin B1 (Thiamine Mononitrate), Vitamin B6 (Pyridoxine Hydrochloride), Vitamin D (Cholecalciferol), Vitamin B2 (Riboflavin), Folic Acid. BHT Added to Package to Help Preserve Freshness.",
+  "quantity": 19
+}]
