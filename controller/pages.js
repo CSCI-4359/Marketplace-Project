@@ -44,7 +44,7 @@ router.get('/ct2', (req, res) => {
             res.render('ct2', {products: result, pageTitle: 'Cereal', pageName: 'Cereal'});
         })
         .catch(err => console.log(err));
-});
+});''
 
 router.get('/ct3', (req, res) => {
     ct3product.find()
