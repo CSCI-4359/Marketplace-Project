@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "5f20a8fc37aa007922085e61"
+  },
+  "title": "Fresh Baking Potatoes, bulk",
+  "img": "RedStarOriginalInstantDryQuickRiseYeast.jpg",
+  "size": "Average 0.96 lb",
+  "price": {
+    "$numberDecimal": "0.01"
+  },
+  "description": "Bulk Baking Potatoes",
+  "instructions": "Store in cool dry place.",
+  "ingredients": "Russet Potatoes.",
+  "quantity": 19
+},{
+  "_id": {
+    "$oid": "5f20aa8838d70854fadc95bf"
+  },
+  "title": "Bolthouse Farms Carrots",
+  "img": "BolthouseFarmsCarrots.jpg",
+  "size": "2 lb",
+  "price": {
+    "$numberDecimal": "0.05"
+  },
+  "description": "These freshly picked carrots are bagged for your convenience. Raw or cooked, Bolthouse carrots are nutritious and are delicious in soups, stews, or as a side dish.",
+  "instructions": "Store in cool dry place.",
+  "ingredients": "Carrots.",
+  "quantity": 9
+},{
+  "_id": {
+    "$oid": "5f20c78938d70854fadc95c0"
+  },
+  "title": "White Onions",
+  "img": "WhiteOnions.jpg",
+  "size": "Average 0.955 lb",
+  "price": 0.01,
+  "description": "White Onions.",
+  "instructions": "Store in cool dry place.",
+  "ingredients": "Pearl Onion.",
+  "quantity": 31
+},{
+  "_id": {
+    "$oid": "5f2185b938d70854fadc95c1"
+  },
+  "title": "Fresh Iceberg Lettuce",
+  "img": "FreshIcebergLettuce.jpg",
+  "size": "Each",
+  "price": {
+    "$numberDecimal": "0.01"
+  },
+  "description": "Iceberg lettuce is Crunchy and Refreshing - Perfect for making salads, topping a burger, tacos sandwiches.",
+  "instructions": "Rinse before using.",
+  "ingredients": "Iceberg Lettuce.",
+  "quantity": 27
+},{
+  "_id": {
+    "$oid": "5f21868638d70854fadc95c2"
+  },
+  "title": "Fresh Jalapeno Peppers",
+  "img": "FreshJalapenoPeppers.jpg",
+  "size": "Average 0.16 lb",
+  "price": 0.01,
+  "description": "Jalapeno Peppers",
+  "instructions": "Store in cool dry place.",
+  "ingredients": "Jalapeno Peppers.",
+  "quantity": 89
+}]
