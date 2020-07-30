@@ -34,7 +34,7 @@ router.get('/contact', (req, res) => {
     
 });
 
-router.get('ct2', (req, res) => {
+router.get('/ct2', (req, res) => {
     ct2product.find()
         .then (result => {
             res.render('ct2', {products: result, pageTitle: 'Cereal', pageName: 'Cereal'});
@@ -42,7 +42,7 @@ router.get('ct2', (req, res) => {
         .catch(err => console.log(err));
 });
 
-router.get('ct3', (req, res) => {
+router.get('/ct3', (req, res) => {
     ct3product.find()
         .then (result => {
             res.render('ct3', {products: result, pageTitle: 'Dairy', pageName: 'Dairy'});
@@ -50,7 +50,7 @@ router.get('ct3', (req, res) => {
         .catch(err => console.log(err));
 });
 
-router.get('ct4', (req, res) => {
+router.get('/ct4', (req, res) => {
     ct4product.find()
         .then (result => {
             res.render('ct4', {products: result, pageTitle: 'Everyday Items', pageName: 'Everyday Items'});
@@ -58,7 +58,7 @@ router.get('ct4', (req, res) => {
         .catch(err => console.log(err));
 });
 
-router.get('ct5', (req, res) => {
+router.get('/ct5', (req, res) => {
     ct5product.find()
         .then (result => {
             res.render('ct5', {products: result, pageTitle: 'Breakfast Items', pageName: 'Breakfast Items'});
@@ -66,7 +66,7 @@ router.get('ct5', (req, res) => {
         .catch(err => console.log(err));
 });
 
-router.get('ct6', (req, res) => {
+router.get('/ct6', (req, res) => {
     ct6product.find()
         .then (result => {
             res.render('ct6', {products: result, pageTitle: 'Baking Items', pageName: 'Baking Items'});
