@@ -1,34 +1,41 @@
 <%- include('layouts/header.ejs') %>
-
 <%- include('layouts/navigation.ejs') %>
 
- <!-- Page Content -->
- <div class="container">    
+<div class="container-fluid">
     <div class="row">
-        
-
-
-        <div class="col-lg-9">           
-            
-        <br><br>
-            <div class="row">                
-                
-                <a href="http://localhost:3000"> LeoG </a>
-
-                        </div>                                     
-                    </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="/assets/img/#" class="text-center"><img class="card-img-top img-detail"
+                        src="/assets/img/#" alt="#"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="http://localhost:3000"> LeoG </a>
+                    </h4>
                 </div>
-
             </div>
-            <!-- /.row -->
-
         </div>
-        <!-- /.col-lg-9 -->
-
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="/assets/img/LeoB.jpg" class="text-center"><img class="card-img-top img-detail"
+                        src="/assets/img/LeoB.jpg" alt="Leonard Box"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="http://lfbox7.github.io"> LeoB </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+                <a href="/assets/img/ACM.png" class="text-center"><img class="card-img-top img-detail"
+                        src="/assets/img/ACM.png" alt="TAMUSA ACM"></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="http://localhost:3600"> TAMUSA ACM </a>
+                    </h4>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /.row -->
-
 </div>
-<!-- /.container -->
-
-<%- include('layouts/footer.ejs') %>
+    <%- include('layouts/footer.ejs') %>
