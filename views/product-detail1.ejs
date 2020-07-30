@@ -7,21 +7,23 @@
             <i class="fa fa-chevron-left" aria-hidden="true"></i>
         </button>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <div class="card h-100">
-                        <a href="/assets/img/ct1/<%= prod.img %>"><img class="card-img-top" src="/assets/img/ct1/<%= prod.img %>" alt="<%= prod.title %>"></a>
+                        <a href="/assets/img/ct1/<%= prod.img %>" class="text-center"><img class="card-img-top img-detail" src="/assets/img/ct1/<%= prod.img %>" alt="<%= prod.title %>"></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="#"><%= prod.title %></a>
                             </h4>
                             <h5>$<%= prod.price %></h5>
-                            <p><%= prod.description %></p>
+                            <p><b>Product Description:</b><br><span><%= prod.description %></span></p>
+                            <p><b>Product Instructions:</b><br><span><%= prod.instructions %></span></p>
+                            <p><b>Product Ingedients:</b><br><span><%= prod.ingredients %></span></p>
                         <form action="/add-cart" method="POST">
                             <input type="hidden" name="id" value="<%= prod._id %>">
                             <input type="hidden" name="catId" value="cat1">
-                            <button type="submit" class="btn btn-primary"> Add to Cart</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: #7386D5;"> Add to Cart</button>
                         </form>
                     </div>
                 </div>
