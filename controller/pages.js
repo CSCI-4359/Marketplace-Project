@@ -37,7 +37,39 @@ router.get('/contact', (req, res) => {
 router.get('ct2', (req, res) => {
     ct2product.find()
         .then (result => {
-            res.render('index', {products: result, pageTitle: 'Homepage'});
+            res.render('ct2', {products: result, pageTitle: 'Cereal', pageName: 'Cereal'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('ct3', (req, res) => {
+    ct3product.find()
+        .then (result => {
+            res.render('ct3', {products: result, pageTitle: 'Dairy', pageName: 'Dairy'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('ct4', (req, res) => {
+    ct4product.find()
+        .then (result => {
+            res.render('ct4', {products: result, pageTitle: 'Everyday Items', pageName: 'Everyday Items'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('ct5', (req, res) => {
+    ct5product.find()
+        .then (result => {
+            res.render('ct5', {products: result, pageTitle: 'Breakfast Items', pageName: 'Breakfast Items'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('ct6', (req, res) => {
+    ct6product.find()
+        .then (result => {
+            res.render('ct6', {products: result, pageTitle: 'Baking Items', pageName: 'Baking Items'});
         })
         .catch(err => console.log(err));
 });
@@ -45,8 +77,49 @@ router.get('ct2', (req, res) => {
 router.get('/ct1/:prodId', (req, res) => {
     ct1product.findById(req.params.prodId)
         .then (result => {
-            res.render('product-detail1', {prod: result, pageTitle: 'Product Detail', pageName: 'Category 1'});
+            res.render('product-detail1', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 1'});
         })
         .catch(err => console.log(err));
 });
+
+router.get('/ct2/:prodId', (req, res) => {
+    ct2product.findById(req.params.prodId)
+        .then (result => {
+            res.render('product-detail2', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 2'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('/ct3/:prodId', (req, res) => {
+    ct3product.findById(req.params.prodId)
+        .then (result => {
+            res.render('product-detail3', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 3'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('/ct4/:prodId', (req, res) => {
+    ct4product.findById(req.params.prodId)
+        .then (result => {
+            res.render('product-detail4', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 4'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('/ct5/:prodId', (req, res) => {
+    ct5product.findById(req.params.prodId)
+        .then (result => {
+            res.render('product-detail5', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 5'});
+        })
+        .catch(err => console.log(err));
+});
+
+router.get('/ct6/:prodId', (req, res) => {
+    ct6product.findById(req.params.prodId)
+        .then (result => {
+            res.render('product-detail6', {prod: result, pageTitle: 'Items Detail', pageName: 'Category 6'});
+        })
+        .catch(err => console.log(err));
+});
+
 module.exports = router;

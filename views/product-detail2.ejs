@@ -1,0 +1,37 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+<%- include('layouts/sidebar.ejs')%>
+    <!-- Page Content -->
+    <div id="content">
+        <button type="button" id="sidebarCollapse" class="navbar-btn">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card h-100">
+                        <a href="/assets/img/ct2/<%= prod.img %>" class="text-center"><img class="card-img-top img-detail" src="/assets/img/ct2/<%= prod.img %>" alt="<%= prod.title %>"></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#"><%= prod.title %></a>
+                            </h4>
+                            <h5>$<%= prod.price %></h5>
+                            <p><b>Product Description:</b><br><span><%= prod.description %></span></p>
+                            <p><b>Product Instructions:</b><br><span><%= prod.instructions %></span></p>
+                            <p><b>Product Ingedients:</b><br><span><%= prod.ingredients %></span></p>
+                        <form action="/add-cart" method="POST">
+                            <input type="hidden" name="id" value="<%= prod._id %>">
+                            <input type="hidden" name="catId" value="cat2">
+                            <button type="submit" class="btn btn-primary" style="background-color: #7386D5;"> Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <div>
+</div>
+<%- include('layouts/footer.ejs') %>

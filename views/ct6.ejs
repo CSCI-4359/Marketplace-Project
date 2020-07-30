@@ -12,16 +12,16 @@
             <% for (let p of products) { %>
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="/assets/img/ct1/<%= p.img %>"><img class="card-img-top" src="/assets/img/ct1/<%= p.img %>"
+                    <a href="/assets/img/ct6/<%= p.img %>"><img class="card-img-top" src="/assets/img/ct6/<%= p.img %>"
                             alt="<%= p.title %>"></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="/ct1/<%=p._id%>"><%= p.title %></a>
+                            <a href="/ct6/<%=p._id%>"><%= p.title %></a>
                         </h4>
                         <h5><%= p.price %></h5>
                         <form action="/add-cart" method="POST">
                             <input type="hidden" name="id" value="<%= p._id %>">
-                            <input type="hidden" name="catId" value="cat1">
+                            <input type="hidden" name="catId" value="cat6">
                             <button type="submit" class="btn btn-primary" style="background-color: #7386D5;"> Add to Cart</button>
                         </form>
                     </div>
