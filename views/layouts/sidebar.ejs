@@ -6,11 +6,11 @@
         </div>
         <!-- Sidebar Links -->
         <ul class="list-unstyled components">
-            <li class="active"><a href="/">Fresh Produce</a></li>
-            <li><a href="/ct2">Cereal</a></li>
-            <li><a href="/ct3">Dairy</a></li>
-            <li><a href="/ct4">Everyday Items</a></li>
-            <li><a href="/ct5">Breakfast Items</a></li>
-            <li><a href="/ct6">Baking Items</a></li>
+            <li <% if (pageName === 'Fresh Produce') { %>class="active" <% } %> ><a href="/">Fresh Produce</a></li>
+            <li <% if (pageName === 'Cereal') { %>class="active" <% } %> ><a href="/ct2">Cereal</a></li>
+            <li <% if (pageName === 'Dairy') { %>class="active" <% } %> ><a href="/ct3">Dairy</a></li>
+            <li <% if (pageName === 'Everyday Items') { %>class="active" <% } %> ><a href="/ct4">Everyday Items</a></li>
+            <li <% if (pageName === 'Breakfast Items') { %>class="active" <% } %> ><a href="/ct5">Breakfast Items</a></li>
+            <li <% if (pageName === 'Baking Items') { %>class="active" <% } %> ><a href="/ct6">Baking Items</a></li>
         </ul>
     </nav>

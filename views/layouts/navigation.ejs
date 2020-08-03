@@ -1,27 +1,70 @@
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Food Bank Curbside</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item" >
-                    <a class="nav-link" href="/">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>             
-                <li class="nav-item  ">
-                    <a class="nav-link" href="/cart">Cart</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="nav-link" href="/signin">Sign In</a>
-                </li> 
-                <li class="nav-item ">
-                    <a class="nav-link" href="/contact">Contact Us</a>
-                </li>               
-            </ul>
-        </div>
+  <!-- Navigation 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">-->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+    <a class="navbar-brand" href="/">
+      <img src="/assets/img/logo.png" height="30" alt="SA Food Bank logo" style="background-color: #ffffff;">
+    </a>
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav1"
+      aria-controls="basicExampleNav1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Breadcrumbs -->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="waves-effect" href="/">Home</a></li>
+      <li class="breadcrumb-item active"><a class="waves-effect" href="/contact">Contact</a></li>
+    </ol>
+    <!-- Breadcrumbs -->
+  
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="basicExampleNav1">
+  
+      <!-- Right -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#!" class="nav-link navbar-link-2 waves-effect">
+            <span class="badge badge-pill red">1</span>
+            <i class="fas fa-shopping-cart pl-0"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown bg-dark">
+          <a class="nav-link dropdown-toggle waves-effect" id="navbarDropdownMenuLink3" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            <i class="united kingdom flag m-0"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#!">Action</a>
+            <a class="dropdown-item" href="#!">Another action</a>
+            <a class="dropdown-item" href="#!">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#!" class="nav-link waves-effect">
+            Shop
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#!" class="nav-link waves-effect">
+            Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#!" class="nav-link waves-effect">
+            Sign in
+          </a>
+        </li>
+        <li class="nav-item pl-2 mb-2 mb-md-0">
+          <a href="#!" type="button"
+            class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light">Sign up</a>
+        </li>
+      </ul>
+  
     </div>
-</nav>
+    <!-- Links -->
+  
+  </nav>
+  <!-- Navbar -->

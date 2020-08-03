@@ -9,6 +9,7 @@ const ct4product = require('../models/ct4');
 const ct5product = require('../models/ct5');
 const ct6product = require('../models/ct6');
 const Cart = require('../models/cart');
+const WishList = require('../models/wish-list');
 
 const router = express.Router();
 
@@ -27,7 +28,18 @@ router.post('/add-cart', (req, res) => {
         ct1product.findById(req.body.id)
             .then(result =>{
                 var prod = { title: result.title, price: result.price, quantity: result.quantity, img: result.img};
-                Cart.collection.insertOne(prod); console.log('Insert is success..');})
+                Cart.collection.insertOne(prod); console.log('Insert to cart is success..');})
+                
+            .catch(err => console.log(err));
+    }
+});
+
+router.post('/add-wish-list', (req, res) => {
+    if (req.body.catId == 'cat1') {
+        ct1product.findById(req.body.id)
+            .then(result =>{
+                var prod = { title: result.title, price: result.price, quantity: result.quantity, img: result.img};
+                WishList.collection.insertOne(prod); console.log('Insert to wish list is success..');})
                 
             .catch(err => console.log(err));
     }
