@@ -24,26 +24,116 @@ router.get('/', (req, res) => {
 });
 
 router.post('/add-cart', (req, res) => {
+    const itemId = req.body.id;
     if (req.body.catId == 'cat1') {
-        ct1product.findById(req.body.id)
-            .then(result =>{
-                var prod = { title: result.title, price: result.price, quantity: result.quantity, img: result.img};
-                Cart.collection.insertOne(prod); console.log('Insert to cart is success..');})
-                
+        ct1product.findById(itemId)
+            .then(result => { insertIntoCart(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat2') {
+        ct2product.findById(itemId)
+            .then(result => { insertIntoCart(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat3') {
+        ct3product.findById(itemId)
+            .then(result => { insertIntoCart(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat4') {
+        ct4product.findById(itemId)
+            .then(result => { insertIntoCart(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat5') {
+        ct5product.findById(itemId)
+            .then(result => { insertIntoCart(result, itemId); })
+            .catch(err => console.log(err));
+    } else {
+        ct6product.findById(itemId)
+            .then(result => { insertIntoCart(result, itemId); })
             .catch(err => console.log(err));
     }
 });
 
+function insertIntoCart(result, itemId) {
+    Cart.findOneAndUpdate({itemId: itemId}, {$inc: {quantity: 1}}, function(err, doc) {if(err) {console.log(err);}
+    console.log(doc);
+    if (doc == null) {
+        var prod = { itemId: itemId, title: result.title, price: result.price, quantity: 1, img: result.img};
+        Cart.collection.insertOne(prod); console.log('Insert to cart is success..');
+    }
+    });
+}
+
+router.delete('/:id', (req, res) => {
+    Cart.findByIdAndDelete(req.params.id, function(err, doc) { if(err) {console.log(err); } });
+    Cart.find()
+        .then (result => {
+            res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 0});
+        })
+        .catch(err => console.log(err));    
+});
+
+router.get('/increase/:id', (req, res) => {
+    Cart.findByIdAndUpdate({_id: req.params.id}, {$inc: {quantity: 1}}, function(err, doc) { if(err) {console.log(err);} })
+    Cart.find()
+        .then (result => {
+            res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 1});
+        })
+        .catch(err => console.log(err)); 
+});
+
+router.get('/decrease/:id', (req, res) => {
+    Cart.findByIdAndUpdate({_id: req.params.id}, {$inc: {quantity: -1}}, function(err, doc) { if(err) {console.log(err);} })
+    Cart.find()
+        .then (result => {
+            res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 1});
+        })
+        .catch(err => console.log(err)); 
+});
+
+router.get('/cart', (req, res) => {
+    Cart.find()
+        .then (result => {
+            res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 0});
+        })
+        .catch(err => console.log(err));
+});
+
 router.post('/add-wish-list', (req, res) => {
+    const itemId = req.body.id;
     if (req.body.catId == 'cat1') {
-        ct1product.findById(req.body.id)
-            .then(result =>{
-                var prod = { title: result.title, price: result.price, quantity: result.quantity, img: result.img};
-                WishList.collection.insertOne(prod); console.log('Insert to wish list is success..');})
-                
+        ct1product.findById(itemId)
+            .then(result => { insertIntoWishList(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat2') {
+        ct2product.findById(itemId)
+            .then(result => { insertIntoWishList(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat3') {
+        ct3product.findById(itemId)
+            .then(result => { insertIntoWishList(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat4') {
+        ct4product.findById(itemId)
+            .then(result => { insertIntoWishList(result, itemId); })
+            .catch(err => console.log(err));
+    } else if (req.body.catId == 'cat5') {
+        ct5product.findById(itemId)
+            .then(result => { insertIntoWishList(result, itemId); })
+            .catch(err => console.log(err));
+    } else {
+        ct6product.findById(itemId)
+            .then(result => { insertIntoWishList(result, itemId); })
             .catch(err => console.log(err));
     }
 });
+
+function insertIntoWishList(result, itemId) {
+    WishList.findOneAndUpdate({itemId: itemId}, {$inc: {quantity: 1}}, function(err, doc) { if(err) {console.log(err);}
+    if (doc == null) {
+        var prod = { itemId: itemId, title: result.title, price: result.price, quantity: 1, img: result.img};
+        WishList.collection.insertOne(prod); console.log('Insert to cart is success..');
+    }
+    });
+}
 
 router.get('/contact', (req, res) => {
             res.render('contact', {pageTitle: 'Contact'});

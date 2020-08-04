@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const cartSchema = new Schema ({
+    itemId: {
+        type: String,
+        required: true
+    },
     title: {
         type: String,
         required: true
@@ -9,7 +13,7 @@ const cartSchema = new Schema ({
     price: {
         type: Number
     },
-    Quantity: {
+    quantity: {
         type: Number
     },
     img: {

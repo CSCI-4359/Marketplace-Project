@@ -8,22 +8,22 @@
   </button>
   <section>
     <div class="row">
-      <% for (var i = 0; i < products.length; i++) { %>
+      <% for (let p of products) { %>
       <div class="col-md-3 col-sm-6 pb-4">
         <div class="product-grid">
           <div class="product-image">
-            <a href="/assets/img/ct1/<%= products[i].img %>">
-              <img src="/assets/img/ct1/<%= products[i].img %>" alt="<%= products[i].title %>" class="card-img-top">
+            <a href="/assets/img/ct1/<%= p.img %>">
+              <img src="/assets/img/ct1/<%= p.img %>" alt="<%= p.title %>" class="card-img-top">
             </a>
             <ul class="social">
-              <li><a href="/ct1/<%=products[i]._id%>/" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+              <li><a href="/ct1/<%=p._id%>/" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
               <li><form action="/add-wish-list" method="POST" id="addWishListForm">
-                <input type="hidden" name="id" value="<%= products[i]._id %>">
+                <input type="hidden" name="id" value="<%= p._id %>">
                 <input type="hidden" name="catId" value="cat1">
                 <a href="#" data-tip="Add to Wishlist" onclick="document.getElementById('addWishListForm').submit()"><i class="fa fa-shopping-bag"></i></a>
               </li>
               <li><form action="/add-cart" method="POST" id="addCartForm">
-                <input type="hidden" name="id" value="<%= products[i]._id %>">
+                <input type="hidden" name="id" value="<%= p._id %>">
                 <input type="hidden" name="catId" value="cat1">
                 <a href="#" data-tip="Add to Cart" onclick="document.getElementById('addCartForm').submit()"><i class="fa fa-shopping-cart"></i></a>
               </form></li>
@@ -41,14 +41,14 @@
             <li class="far fa-star"></li>
           </ul>
           <div class="product-content">
-            <h3 class="title"><a href="#"><%= products[i].title %></a></h3>
-            <div class="price">$<%= products[i].price.toFixed(2) %>
+            <h3 class="title"><a href="#"><%= p.title %></a></h3>
+            <div class="price">$<%= p.price.toFixed(2) %>
               <!-- Discounted from price
               <span>$10.00</span>
               -->
             </div>
             <form action="/add-cart" method="POST" id="mainCartForm">
-              <input type="hidden" name="id" value="<%= products[i]._id %>">
+              <input type="hidden" name="id" value="<%= p._id %>">
               <input type="hidden" name="catId" value="cat1">
               <a class="add-to-cart" onclick="document.getElementById('mainCartForm').submit()">+ Add To Cart</a>
             </form>
