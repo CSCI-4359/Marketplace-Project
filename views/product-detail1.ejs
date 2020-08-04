@@ -13,7 +13,7 @@
                 <div id="productDetailCarousel" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="/assets/img/ct1/<%= prod.img %>" class="d-block w-100" alt="...">
+                        <img src="/assets/img/products/<%= prod.img %>" class="d-block w-100" alt="...">
                       </div>
                       <div class="carousel-item">
                         <img src="..." class="d-block w-100" alt="...">
@@ -91,7 +91,11 @@
                             <input type="text" name="quantity" value="1" class="qty">
                             <div class="qtyplus">+</div>
                         </form>
-                        <a href="#" class="round-black-btn">Add to Cart</a>
+                        <form action="/add-cart" method="POST" id="addCartForm">
+                            <input type="hidden" name="id" value="<%= prod._id %>">
+                            <input type="hidden" name="catId" value="cat1">
+                            <a class="round-black-btn" onclick="document.getElementById('addCartForm').submit()">Add to Cart</a>
+                        </form>
                     </div>
                 </div>
             </div>

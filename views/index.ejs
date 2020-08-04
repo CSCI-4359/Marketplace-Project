@@ -12,20 +12,20 @@
       <div class="col-md-3 col-sm-6 pb-4">
         <div class="product-grid">
           <div class="product-image">
-            <a href="/assets/img/ct1/<%= p.img %>">
-              <img src="/assets/img/ct1/<%= p.img %>" alt="<%= p.title %>" class="card-img-top">
+            <a href="/assets/img/products/<%= p.img %>">
+              <img src="/assets/img/products/<%= p.img %>" alt="<%= p.title %>" class="card-img-top">
             </a>
             <ul class="social">
               <li><a href="/ct1/<%=p._id%>/" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
               <li><form action="/add-wish-list" method="POST" id="addWishListForm">
                 <input type="hidden" name="id" value="<%= p._id %>">
                 <input type="hidden" name="catId" value="cat1">
-                <a href="#" data-tip="Add to Wishlist" onclick="document.getElementById('addWishListForm').submit()"><i class="fa fa-shopping-bag"></i></a>
+                <a data-tip="Add to Wishlist" onclick="document.getElementById('addWishListForm').submit()"><i class="fa fa-shopping-bag"></i></a>
               </li>
               <li><form action="/add-cart" method="POST" id="addCartForm">
                 <input type="hidden" name="id" value="<%= p._id %>">
                 <input type="hidden" name="catId" value="cat1">
-                <a href="#" data-tip="Add to Cart" onclick="document.getElementById('addCartForm').submit()"><i class="fa fa-shopping-cart"></i></a>
+                <a data-tip="Add to Cart" onclick="document.getElementById('addCartForm').submit()"><i class="fa fa-shopping-cart"></i></a>
               </form></li>
             </ul>
             <!-- Sale and Discount Tags
