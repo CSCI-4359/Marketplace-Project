@@ -1,7 +1,7 @@
 <div class="wrapper">
-    <nav id="sidebar">
+    <nav id="sidebar" class="primary-color">
         <!-- Sidebar Header -->
-        <div class="sidebar-header">
+        <div class="sidebar-header tertiary-color">
             <h3 class="text-center"><%= pageName %></h3>
         </div>
         <!-- Sidebar Links -->
@@ -14,3 +14,7 @@
             <li <% if (pageName === 'Baking Items') { %>class="active" <% } %> ><a href="/ct6">Baking Items</a></li>
         </ul>
     </nav>
+    <div id="content">
+        <button type="button" id="sidebarCollapse" class="navbar-btn secondary-color">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>

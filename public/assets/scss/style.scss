@@ -1,7 +1,9 @@
 /* Scss Document */
 
-@main '_main';
+@import '_color';
+@import '_main';
 @import '_sidebar';
 @import '_product-categories'; 
 @import '_product-detail';
+@import '_cart';
 @import '_footer';

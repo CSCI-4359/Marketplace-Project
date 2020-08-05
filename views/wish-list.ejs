@@ -1,0 +1,63 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+<%- include('layouts/sidebar.ejs')%>
+<section>
+    <div class="row">
+        <div class="col-10 offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%  let subTotal = 0; 
+                        for (let p of product) { 
+                        
+                    %>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            
+                            <a class="thumbnail pull-left" href="/assets/img/products/<%= p.img %>"> <img class="media-object" src="/assets/img/products/<%= p.img %>" alt="<%= p.title %>" style="width: 72px; height: 72px;"></a>
+
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#"><%= p.title %></a></h4>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        
+                        <td class="col-sm-1 col-md-1 text-center"><a href="/decrease/<%= p.id %>"><i class="fas fa-chevron-down fa-xs secondary-color"></i></a> <input class="text-center" value="<%= p.quantity %>" size="1"/><a href="/increase/<%= p.id %>"> <i class="fas fa-chevron-up fa-xs secondary-color"></i></a> </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= p.price %></strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= (p.quantity * p.price).toFixed(2) %></strong></td>
+                        <td class="col-sm-1 col-md-1">
+                            <form action="/<%= p.id %>?_method=Delete" method="POST" id="removeButton">
+                                <button type="button" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color">
+                                    <span class="glyphicon glyphicon-remove"></span> Remove
+                                </button>
+                            </form>
+                        </td>
+                        <td class="col-sm-1 col-md-1">
+                            <form action="/add-cart" method="POST" id="addWishListForm">
+                                <input type="hidden" name="id" value="<%= p._id %>">
+                                <input type="hidden" name="catId" value="cat1">
+                                <button type="submit" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-primary-color text-primary-color hover-border-secondary-color hover-text-secondary-color">
+                                    <span class="glyphicon glyphicon-remove"></span>Add Cart
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+</div>
+</div>
+<%- include('layouts/footer.ejs') %>

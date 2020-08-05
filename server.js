@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(methodOverride("_method"));
 app.use('/', pagesRouter);
 
-mongoose.connect('mongodb://localhost:27017/ShoppingDB', {useNewUrlParser: true, useUnifiedTopology: true, findOneAndUpdate: true})
+mongoose.connect('mongodb://localhost:27017/ShoppingDB', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         app.listen(4200, () => {
             console.log('MongoDB connected. Express server is running')

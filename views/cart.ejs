@@ -1,10 +1,6 @@
 <%- include('layouts/header.ejs') %>
 <%- include('layouts/navigation.ejs') %>
 <%- include('layouts/sidebar.ejs')%>
-<div id="content">
-    <button type="button" id="sidebarCollapse" class="navbar-btn">
-      <i class="fa fa-chevron-left" aria-hidden="true"></i>
-    </button>
 <section>
     <div class="row">
         <div class="col-10 offset-1">
@@ -12,9 +8,10 @@
                 <thead>
                     <tr>
                         <th>Product</th>
-                        <th>Quantity</th>
+                        <th class="text-center">Quantity</th>
                         <th class="text-center">Price</th>
                         <th class="text-center">Total</th>
+                        <th> </th>
                         <th> </th>
                     </tr>
                 </thead>
@@ -35,15 +32,38 @@
                             </div>
                         </div></td>
                         
-                        <td class="col-sm-1 col-md-1 text-center"><a href="/decrease/<%= p.id %>"><i class="fa fa-chevron-down"></i></a><span><%= p.quantity %></span><a href="/increase/<%= p.id %>"><i class="fa fa-chevron-up"></i></a> </td>
+                        <td class="col-sm-1 col-md-1 text-center">
+                            <a href="/decrease/<%= p.id %>">
+                                <i class="fas fa-chevron-down fa-xs border-secondary-color text-secondary-color"></i>
+                            </a> 
+                            <input class="text-center" 
+                                <% if (p.quantity > 0) { %>
+                                        value="<%= p.quantity %>" 
+                                <%  } else {
+                                        /<%= p.id %>?_method=Delete
+                                    } %>  
+                            
+                            size="1"/>
+                            <a href="/increase/<%= p.id %>"> 
+                                <i class="fas fa-chevron-up fa-xs border-secondary-color text-secondary-color"></i>
+                            </a> 
+                        </td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>$<%= p.price %></strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>$<%= (p.quantity * p.price).toFixed(2) %></strong></td>
                         <td class="col-sm-1 col-md-1">
-                        <form action="/<%= p.id %>?_method=Delete" method="POST" id="removeButton">
-                            <button type="button" class="btn btn-danger">
-                                <span class="glyphicon glyphicon-remove"></span> Remove
-                            </button></td>
-                        </form>
+                            <form action="/<%= p.id %>?_method=Delete" method="POST" id="removeButton">
+                                <button type="submit" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color">
+                                    <span class="glyphicon glyphicon-remove"></span> Remove
+                                </button>
+                            </form>
+                        </td>
+                        <td class="col-sm-1 col-md-1">
+                            <form action="/<%= p.id %>?_method=Add" method="POST" id="addButton">
+                                <button type="submit" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-primary-color text-primary-color hover-border-secondary-color hover-text-secondary-color">
+                                    <span class="glyphicon glyphicon-add"></span>Wishlist
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                     <%  subTotal = subTotal + (p.quantity * p.price);
                     }   
@@ -51,10 +71,8 @@
                         var total = 0;
                         tax = subTotal * 0.0625;
                         total = subTotal + tax; 
-                    %>
-                   
+                    %>               
                     <tr>
-                        <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h5>Subtotal</h5></td>
@@ -64,30 +82,35 @@
                     <tr>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
                         <td><h5>Estimated tax</h5></td>
                         <td class="text-right"><h5><strong>$<%= tax.toFixed(2) %></strong></h5></td>
+                        <td>   </td>
+                        <td>   </td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
-                        <td>   </td>
                         <td><h3>Total</h3></td>
                         <td class="text-right"><h3><strong>$<%= total.toFixed(2) %></strong></h3></td>
+                        <td>   </td>
+                        <td>   </td>
                     </tr>
                     
                     <tr>
                         <td>   </td>
                         <td>   </td>
+                        <td>
+                            <a type="button" href="/" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-tertiary-color text-tertiary-color hover-border-quaternary-color hover-text-quaternary-color">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-quaternary-color text-quaternary-color hover-border-tertiary-color hover-text-tertiary-color">
+                                Checkout <span class="glyphicon glyphicon-play"></span>
+                            </button>
+                        </td>
                         <td>   </td>
-                        <td>
-                        <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                        </button></td>
-                        <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
+                        <td>   </td>
                     </tr> 
                    
                 </tbody>
