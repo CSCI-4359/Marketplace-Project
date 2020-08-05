@@ -81,15 +81,24 @@ router.get('/increase/:id', (req, res) => {
 });
 
 router.get('/decrease/:id', (req, res) => {
-    Cart.findByIdAndUpdate({_id: req.params.id}, {$inc: {quantity: -1}}, function(err, doc) { if(err) {console.log(err);} })
-    Cart.find()
-        .then (result => {
-            res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 1});
-        })
-        .catch(err => console.log(err)); 
+    Cart.findByIdAndUpdate({_id: req.params.id}, {$inc: {quantity: -1}}, function(err, doc) { if(err) {console.log(err);} 
+        if (doc.quantity == 1) {
+            Cart.findByIdAndDelete(req.params.id, function(err, doc) { if(err) {console.log(err); } });
+            Cart.find()
+                .then (result => {
+                    res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 1});
+                })
+                .catch(err => console.log(err));
+        } else {
+            Cart.find()
+                .then (result => {
+                    res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 1});
+                })
+                .catch(err => console.log(err));
+        }})
 });
 
-router.get('/cart', (req, res) => { // retrieving items from cart 
+router.get('/cart', (req, res) => { // retrieving items from cart
     Cart.find()
         .then (result => {
             res.render('cart', {product: result, pageTitle: 'cart', pageName: 'Cart', status: 0});
@@ -154,12 +163,21 @@ router.get('/increase/:id', (req, res) => {
 });
 
 router.get('/decrease/:id', (req, res) => {
-    WishList.findByIdAndUpdate({_id: req.params.id}, {$inc: {quantity: -1}}, function(err, doc) { if(err) {console.log(err);} })
-    WishList.find()
-        .then (result => {
-            res.render('wish-list', {product: result, pageTitle: 'wish list', pageName: 'Wish List', status: 0});
-        })
-        .catch(err => console.log(err)); 
+    WishList.findByIdAndUpdate({_id: req.params.id}, {$inc: {quantity: -1}}, function(err, doc) { if(err) {console.log(err);} 
+    if(doc.quantity == 1) {
+        WishList.findByIdAndDelete(req.params.id, function(err, doc) { if(err) {console.log(err); } });
+        WishList.find()
+            .then (result => {
+                res.render('wish-list', {product: result, pageTitle: 'wish list', pageName: 'Wish List', status: 0});
+            })
+            .catch(err => console.log(err)); 
+    } else {
+        WishList.find()
+            .then (result => {
+                res.render('wish-list', {product: result, pageTitle: 'wish list', pageName: 'Wish List', status: 0});
+            })
+            .catch(err => console.log(err)); 
+    }})
 });
 
 router.get('/wish-list', (req, res) => {

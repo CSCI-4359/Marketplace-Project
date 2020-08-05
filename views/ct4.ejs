@@ -1,37 +1,59 @@
 <%- include('layouts/header.ejs') %>
 <%- include('layouts/navigation.ejs') %>
 <%- include('layouts/sidebar.ejs')%>
-    <!-- Page Content -->
-    <div id="content">
-        <button type="button" id="sidebarCollapse" class="navbar-btn">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        </button>
-
-        <div class="container">
-            <div class="row">
-            <% for (let p of products) { %>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <a href="/assets/img/products/<%= p.img %>"><img class="card-img-top" src="/assets/img/products/<%= p.img %>"
-                            alt="<%= p.title %>"></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="/ct4/<%=p._id%>"><%= p.title %></a>
-                        </h4>
-                        <h5>$<%= p.price %></h5>
-                        <form action="/add-cart" method="POST">
-                            <input type="hidden" name="id" value="<%= p._id %>">
-                            <input type="hidden" name="catId" value="cat4">
-                            <button type="submit" class="btn btn-primary" style="background-color: #7386D5;"> Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
+<!-- Page Content -->
+  <section>
+    <div class="row">
+      <% for (let p of products) { %>
+      <div class="col-md-3 col-sm-6 pb-4">
+        <div class="product-grid">
+          <div class="product-image">
+            <a href="/assets/img/products/<%= p.img %>">
+              <img src="/assets/img/products/<%= p.img %>" alt="<%= p.title %>" class="card-img-top">
+            </a>
+            <ul class="social">
+              <li><a href="/ct4/<%=p._id%>/" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+              <li><form action="/add-wish-list" method="POST" id="addWishListForm">
+                <input type="hidden" name="id" value="<%= p._id %>">
+                <input type="hidden" name="catId" value="cat4">
+                <a data-tip="Add to Wishlist" onclick="document.getElementById('addWishListForm').submit()"><i class="fa fa-shopping-bag"></i></a>
+              </li>
+              <li><form action="/add-cart" method="POST" id="addCartForm">
+                <input type="hidden" name="id" value="<%= p._id %>">
+                <input type="hidden" name="catId" value="cat4">
+                <a data-tip="Add to Cart" onclick="document.getElementById('addCartForm').submit()"><i class="fa fa-shopping-cart"></i></a>
+              </form></li>
+            </ul>
+            <!-- Sale and Discount Tags
+                    <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">50%</span>
+            -->
+          </div>
+          <ul class="rating">
+            <li class="far fa-star"></li>
+            <li class="far fa-star"></li>
+            <li class="far fa-star"></li>
+            <li class="far fa-star"></li>
+            <li class="far fa-star"></li>
+          </ul>
+          <div class="product-content">
+            <h3 class="title hover-text-quinary-color"><a href="#"><%= p.title %></a></h3>
+            <div class="price">$<%= p.price.toFixed(2) %>
+              <!-- Discounted from price
+              <span>$10.00</span>
+              -->
             </div>
-            <% } %>
+            <form action="/add-cart" method="POST" id="mainCartForm">
+              <input type="hidden" name="id" value="<%= p._id %>">
+              <input type="hidden" name="catId" value="cat4">
+              <a class="add-to-cart" onclick="document.getElementById('mainCartForm').submit()">+ Add To Cart</a>
+            </form>
+          </div>
         </div>
-        <!-- /.row -->
+      </div>
+      <% } %>
     </div>
-    <!-- /.container -->
-    <div>
+  </section>
+</div>
 </div>
 <%- include('layouts/footer.ejs') %>
