@@ -82,14 +82,14 @@
                     <div class="product-count">
                         <label for="size">Quantity</label>
                         <form action="#" class="display-flex">
-                            <div class="qtyminus">-</div>
+                            <div class="qtyminus color-white"><i class="fa fa-chevron-down text-secondary-color"></i></div>
                             <input type="text" name="quantity" value="1" class="qty">
-                            <div class="qtyplus">+</div>
+                            <div class="qtyplus"><i class="fa fa-chevron-up text-secondary-color"></i></div>
                         </form>
                         <form action="/add-cart" method="POST" id="addCartForm">
                             <input type="hidden" name="id" value="<%= prod._id %>">
                             <input type="hidden" name="catId" value="cat1">
-                            <a class="round-black-btn" onclick="document.getElementById('addCartForm').submit()">Add to Cart</a>
+                            <a class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color" onclick="document.getElementById('addCartForm').submit()">Add to Cart</a>
                         </form>
                     </div>
                 </div>
@@ -157,10 +157,10 @@
                                 </div>
                             </div>
                         </div>
-                        <form action="/add-cart" method="POST">
+                        <form action="/add-review" method="POST">
                             <input type="hidden" name="id" value="<%= prod._id %>">
-                            <input type="hidden" name="catId" value="cat2">
-                            <button class="round-black-btn" type="submit">Submit Review</button>
+                            <input type="hidden" name="catId" value="cat1">
+                            <button class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color" type="submit">Submit Review</button>
                         </form>
                     </form>
                   </div>

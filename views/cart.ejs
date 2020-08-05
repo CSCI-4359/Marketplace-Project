@@ -18,7 +18,6 @@
                 <tbody>
                     <%  let subTotal = 0; 
                         for (let p of product) { 
-                        
                     %>
                     <tr>
                         <td class="col-sm-8 col-md-6">
@@ -36,14 +35,7 @@
                             <a href="/decrease/<%= p.id %>">
                                 <i class="fas fa-chevron-down fa-xs border-secondary-color text-secondary-color"></i>
                             </a> 
-                            <input class="text-center" 
-                                <% if (p.quantity > 0) { %>
-                                        value="<%= p.quantity %>" 
-                                <%  } else {
-                                        /<%= p.id %>?_method=Delete
-                                    } %>  
-                            
-                            size="1"/>
+                            <input class="text-center" value="<%= p.quantity %>" size="1"/>
                             <a href="/increase/<%= p.id %>"> 
                                 <i class="fas fa-chevron-up fa-xs border-secondary-color text-secondary-color"></i>
                             </a> 
