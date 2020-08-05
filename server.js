@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(methodOverride("_method"));
+app.use(methodOverride('_method'));
 app.use('/', pagesRouter);
 
 mongoose.connect('mongodb://localhost:27017/ShoppingDB', {useNewUrlParser: true, useUnifiedTopology: true})
@@ -20,3 +20,13 @@ mongoose.connect('mongodb://localhost:27017/ShoppingDB', {useNewUrlParser: true,
             console.log('MongoDB connected. Express server is running')
     });
 })
+
+
+/*
+mongoose.connect('mongodb+srv://root:<root>@cluster0.bkb3r.mongodb.net/<ShoppingDB>?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true, findOneAndUpdate: true})
+    .then(() => {
+        app.listen(4200, () => {
+            console.log('MongoDB Atlas connected. Express server is running')
+    });
+})
+*/
