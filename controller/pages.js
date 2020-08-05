@@ -193,6 +193,11 @@ router.get('/contact', (req, res) => {
     
 });
 
+router.get('/checkout', (req, res) => {
+    res.render('checkout', {pageTitle: 'Checkout'});
+
+});
+
 router.get('/ct2', (req, res) => {
     ct2product.find()
         .then (result => {
