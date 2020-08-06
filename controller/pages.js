@@ -194,7 +194,11 @@ router.get('/contact', (req, res) => {
 });
 
 router.get('/checkout', (req, res) => {
-    res.render('checkout', {pageTitle: 'Checkout'});
+    Cart.find()
+        .then (result => {
+            res.render('checkout', {product: result, pageTitle: 'checkout', pageName: 'Checkout', status: 0});
+        })
+        .catch(err => console.log(err));
 
 });
 
