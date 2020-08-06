@@ -293,7 +293,9 @@ h3.h3 {
 
 .product-grid .product-image {
   position: relative;
-  transition: all .3s ease 0s; }
+  transition: all .3s ease 0s;
+  max-height: 300px;
+  min-height: 300px; }
 
 .product-grid .product-image a {
   display: block; }

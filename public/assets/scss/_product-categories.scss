@@ -3,7 +3,7 @@
 h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}
 
 .product-grid{font-family:Raleway,sans-serif;text-align:center;padding:0 0 72px;border:1px solid rgba(0,0,0,.1);overflow:hidden;position:relative;z-index:1}
-.product-grid .product-image{position:relative;transition:all .3s ease 0s}
+.product-grid .product-image{position:relative;transition:all .3s ease 0s;max-height: 300px; min-height: 300px;}
 .product-grid .product-image a{display:block}
 .product-grid .product-image img{width:100%;height:auto}
 .product-grid .product-image img{width:100%;height:auto;transition:all .5s ease 0s}
