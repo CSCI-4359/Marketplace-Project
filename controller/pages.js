@@ -18,7 +18,7 @@ const router = express.Router();
 router.get('/', (req, res) => { // homepage display 
     ct1product.find()
         .then (result => {
-            res.render('index', {products: result, pageTitle: 'Fresh Produce', pageName: 'Fresh Produce'});
+            res.render('index', {product: result, pageTitle: 'Fresh Produce', pageName: 'Fresh Produce'});
         })
         .catch(err => console.log(err));
 });
@@ -205,7 +205,7 @@ router.get('/checkout', (req, res) => {
 router.get('/ct2', (req, res) => {
     ct2product.find()
         .then (result => {
-            res.render('ct2', {products: result, pageTitle: 'Cereal', pageName: 'Cereal'});
+            res.render('ct2', {product: result, pageTitle: 'Cereal', pageName: 'Cereal'});
         })
         .catch(err => console.log(err));
 });''
@@ -213,7 +213,7 @@ router.get('/ct2', (req, res) => {
 router.get('/ct3', (req, res) => {
     ct3product.find()
         .then (result => {
-            res.render('ct3', {products: result, pageTitle: 'Dairy', pageName: 'Dairy'});
+            res.render('ct3', {product: result, pageTitle: 'Dairy', pageName: 'Dairy'});
         })
         .catch(err => console.log(err));
 });
@@ -221,7 +221,7 @@ router.get('/ct3', (req, res) => {
 router.get('/ct4', (req, res) => {
     ct4product.find()
         .then (result => {
-            res.render('ct4', {products: result, pageTitle: 'Everyday Items', pageName: 'Everyday Items'});
+            res.render('ct4', {product: result, pageTitle: 'Everyday Items', pageName: 'Everyday Items'});
         })
         .catch(err => console.log(err));
 });
@@ -229,7 +229,7 @@ router.get('/ct4', (req, res) => {
 router.get('/ct5', (req, res) => {
     ct5product.find()
         .then (result => {
-            res.render('ct5', {products: result, pageTitle: 'Breakfast Items', pageName: 'Breakfast Items'});
+            res.render('ct5', {product: result, pageTitle: 'Breakfast Items', pageName: 'Breakfast Items'});
         })
         .catch(err => console.log(err));
 });
@@ -237,7 +237,7 @@ router.get('/ct5', (req, res) => {
 router.get('/ct6', (req, res) => {
     ct6product.find()
         .then (result => {
-            res.render('ct6', {products: result, pageTitle: 'Baking Items', pageName: 'Baking Items'});
+            res.render('ct6', {product: result, pageTitle: 'Baking Items', pageName: 'Baking Items'});
         })
         .catch(err => console.log(err));
 });

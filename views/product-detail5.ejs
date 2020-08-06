@@ -1,37 +1,179 @@
 <%- include('layouts/header.ejs') %>
 <%- include('layouts/navigation.ejs') %>
 <%- include('layouts/sidebar.ejs')%>
-    <!-- Page Content -->
-    <div id="content">
-        <button type="button" id="sidebarCollapse" class="navbar-btn">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        </button>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card h-100">
-                        <a href="/assets/img/ct5/<%= prod.img %>" class="text-center"><img class="card-img-top img-detail" src="/assets/img/ct5/<%= prod.img %>" alt="<%= prod.title %>"></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#"><%= prod.title %></a>
-                            </h4>
-                            <h5>$<%= prod.price %></h5>
-                            <p><b>Product Description:</b><br><span><%= prod.description %></span></p>
-                            <p><b>Product Instructions:</b><br><span><%= prod.instructions %></span></p>
-                            <p><b>Product Ingedients:</b><br><span><%= prod.ingredients %></span></p>
-                        <form action="/add-cart" method="POST">
-                            <input type="hidden" name="id" value="<%= prod._id %>">
-                            <input type="hidden" name="catId" value="cat5">
-                            <button type="submit" class="btn btn-primary" style="background-color: #7386D5;"> Add to Cart</button>
+<!-- Page Content -->
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <div id="productDetailCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/assets/img/products/<%= prod.img %>" class="d-block w-100" alt="<%= prod.title %>">
+                      </div>
+                    </div>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="col-3 offset-2">
+                        <a href="">
+                            <img src="" alt="#" class="img-thumbnail">
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="">
+                            <img src="" alt="#" class="img-thumbnail">
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="">
+                            <img src="" alt="#" class="img-thumbnail">
+                        </a>
+                    </div>
+                </div>
+                -->
+            </div>
+            <div class="col-md-6">
+                <div class="product-dtl">
+                    <div class="product-info">
+                        <div class="product-name"><%= prod.title %></div>
+                        <div class="reviews-counter">
+                            <div class="rate">
+                                <input type="radio" id="star5" name="rate" value="5" checked />
+                                <label for="star5" title="text">5 stars</label>
+                                <input type="radio" id="star4" name="rate" value="4" checked />
+                                <label for="star4" title="text">4 stars</label>
+                                <input type="radio" id="star3" name="rate" value="3" checked />
+                                <label for="star3" title="text">3 stars</label>
+                                <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" title="text">2 stars</label>
+                                <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" title="text">1 star</label>
+                              </div>
+                            <span>3 Reviews</span>
+                        </div>
+                        <div class="product-price-discount"><span>$<%= prod.price.toFixed(2) %></span><span class="line-through">$29.00</span></div>
+                    </div>
+                    <p><%= prod.description %></p>
+                    <!--
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="size">Size</label>
+                            <select id="size" name="size" class="form-control">
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="color">Color</label>
+                            <select id="color" name="color" class="form-control">
+                                <option>Blue</option>
+                                <option>Green</option>
+                                <option>Red</option>
+                            </select>
+                        </div>
+                    </div>
+                    -->
+                    <div class="product-count">
+                        <label for="size">Quantity</label>
+                        <form action="#" class="display-flex">
+                            <div class="qtyminus color-white"><i class="fa fa-chevron-down text-secondary-color"></i></div>
+                            <input type="text" name="quantity" value="1" class="qty">
+                            <div class="qtyplus"><i class="fa fa-chevron-up text-secondary-color"></i></div>
                         </form>
+                        <div class="row pl-2">
+                            <form action="/add-cart" method="POST" id="addCartForm">
+                                <input type="hidden" name="id" value="<%= prod._id %>">
+                                <input type="hidden" name="catId" value="cat5">
+                                <a class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color mt-3"
+                                    onclick="document.getElementById('addCartForm').submit()">Add to Cart</a>
+                            </form>
+                            <form action="/add-wish-list" method="POST" id="addWishListForm">
+                                <input type="hidden" name="id" value="<%= prod._id %>">
+                                <input type="hidden" name="catId" value="cat5">
+                                <a class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-primary-color text-primary-color hover-border-secondary-color hover-text-secondary-color mt-3"
+                                    onclick="document.getElementById('addCartForm').submit()">Add to Wish List</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-<div>
+        <div class="product-info-tabs">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="review-tab" data-toggle="tab" href="#instructions" role="tab" aria-controls="instructions" aria-selected="false">Instructions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="review-tab" data-toggle="tab" href="#ingredients" role="tab" aria-controls="ingredients" aria-selected="false">Ingredients</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review" aria-selected="false">Reviews (0)</a>
+                  </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                    <%= prod.description %>
+                  </div>
+                  <div class="tab-pane fade" id="instructions" role="tabpanel" aria-labelledby="instructions-tab">
+                    <%= prod.instructions %>
+                  </div>
+                  <div class="tab-pane fade" id="ingredients" role="tabpanel" aria-labelledby="ingredients-tab">
+                    <%= prod.ingredients %>
+                  </div>
+                  <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                      <div class="review-heading">REVIEWS</div>
+                      <p class="mb-20">There are no reviews yet.</p>
+                      <form class="review-form">
+                        <div class="form-group">
+                            <label>Your rating</label>
+                            <div class="reviews-counter">
+                                <div class="rate">
+                                    <input type="radio" id="star5" name="rate" value="5" />
+                                    <label for="star5" title="text">5 stars</label>
+                                    <input type="radio" id="star4" name="rate" value="4" />
+                                    <label for="star4" title="text">4 stars</label>
+                                    <input type="radio" id="star3" name="rate" value="3" />
+                                    <label for="star3" title="text">3 stars</label>
+                                    <input type="radio" id="star2" name="rate" value="2" />
+                                    <label for="star2" title="text">2 stars</label>
+                                    <input type="radio" id="star1" name="rate" value="1" />
+                                    <label for="star1" title="text">1 star</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Your message</label>
+                            <textarea class="form-control" rows="10"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="" class="form-control" placeholder="Name*">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="" class="form-control" placeholder="Email Id*">
+                                </div>
+                            </div>
+                        </div>
+                        <form action="/add-review" method="POST">
+                            <input type="hidden" name="id" value="<%= prod._id %>">
+                            <input type="hidden" name="catId" value="cat5">
+                            <button class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color" type="submit">Submit Review</button>
+                        </form>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
 </div>
 <%- include('layouts/footer.ejs') %>
