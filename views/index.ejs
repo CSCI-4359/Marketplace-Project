@@ -13,11 +13,13 @@
             </a>
             <ul class="social">
               <li><a href="/ct1/<%=p._id%>/" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+              
               <li><form action="/add-wish-list" method="POST" id="addWishListForm">
                 <input type="hidden" name="id" value="<%= p._id %>">
                 <input type="hidden" name="catId" value="cat1">
                 <a data-tip="Add to Wishlist" onclick="document.getElementById('addWishListForm').submit()"><i class="fa fa-shopping-bag"></i></a>
               </li>
+              
               <li><form action="/add-cart" method="POST" id="addCartForm">
                 <input type="hidden" name="id" value="<%= p._id %>">
                 <input type="hidden" name="catId" value="cat1">

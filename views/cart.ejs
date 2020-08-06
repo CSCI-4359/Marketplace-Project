@@ -17,47 +17,47 @@
                 </thead>
                 <tbody>
                     <%  let subTotal = 0; 
-                        for (let p of product) { 
+                        for (let c of cart) { 
                     %>
                     <tr>
                         <td class="col-sm-8 col-md-6">
                         <div class="media">
                             
-                            <a class="thumbnail pull-left" href="/assets/img/products/<%= p.img %>"> <img class="media-object" src="/assets/img/products/<%= p.img %>" alt="<%= p.title %>" style="width: 72px; height: 72px;"></a>
+                            <a class="thumbnail pull-left" href="/assets/img/products/<%= c.img %>"> <img class="media-object" src="/assets/img/products/<%= c.img %>" alt="<%= c.title %>" style="width: 72px; height: 72px;"></a>
 
                             <div class="media-body">
-                                <h4 class="media-heading"><a href="#"><%= p.title %></a></h4>
+                                <h4 class="media-heading"><a href="#"><%= c.title %></a></h4>
                                 <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
                             </div>
                         </div></td>
                         
                         <td class="col-sm-1 col-md-1 text-center">
-                            <a href="/decrease/<%= p.id %>">
+                            <a href="/decrease/<%= c.id %>">
                                 <i class="fas fa-chevron-down fa-xs border-secondary-color text-secondary-color"></i>
                             </a> 
-                            <input class="text-center" value="<%= p.quantity %>" size="1"/>
-                            <a href="/increase/<%= p.id %>"> 
+                            <input class="text-center" value="<%= c.quantity %>" size="1"/>
+                            <a href="/increase/<%= c.id %>"> 
                                 <i class="fas fa-chevron-up fa-xs border-secondary-color text-secondary-color"></i>
                             </a> 
                         </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= p.price %></strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= (p.quantity * p.price).toFixed(2) %></strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= c.price %></strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$<%= (c.quantity * c.price).toFixed(2) %></strong></td>
                         <td class="col-sm-1 col-md-1">
-                            <form action="/<%= p.id %>?_method=Delete" method="POST" id="removeButton">
+                            <form action="/<%= c.id %>?_method=Delete" method="POST" id="removeButton">
                                 <button type="submit" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color">
                                     <span class="glyphicon glyphicon-remove"></span> Remove
                                 </button>
                             </form>
                         </td>
                         <td class="col-sm-1 col-md-1">
-                            <form action="/<%= p.id %>?_method=Add" method="POST" id="addButton">
+                            <form action="/<%= c.id %>?_method=Add" method="POST" id="addButton">
                                 <button type="submit" class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-primary-color text-primary-color hover-border-secondary-color hover-text-secondary-color">
                                     <span class="glyphicon glyphicon-add"></span>Wishlist
                                 </button>
                             </form>
                         </td>
                     </tr>
-                    <%  subTotal = subTotal + (p.quantity * p.price);
+                    <%  subTotal = subTotal + (c.quantity * c.price);
                     }   
                         var tax = 0;
                         var total = 0;
