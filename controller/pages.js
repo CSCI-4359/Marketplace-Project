@@ -415,10 +415,10 @@ router.post('/register', (req, res) => {
     const city = req.body.city;   const state = req.body.state;
     const zip = req.body.zip; 
 
-    var user = { email, pass, fname, lname, adress: { add1, add2, city, state, zip} };
-    User.findOne( {email:req.body.email}, function(err, doc) {if (err) { console.log("err") ; } 
+    var register = { email, pass, fname, lname, adress: { add1, add2, city, state, zip} };
+    Register.findOne( {email:req.body.email}, function(err, doc) {if (err) { console.log("err") ; } 
         if (doc == null) {
-            User.collection.insertOne(user);
+            User.collection.insertOne(register);
             ct1product.find()
             .then(results => {
                 res.render('index', { products: results, pageTitle: 'Home', pageName: 'Category 1'}); })
