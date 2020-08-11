@@ -408,4 +408,25 @@ router.get('/ct6/:prodId', (req, res) => {
     });
 });
 
+router.post('/register', (req, res) => {
+    const email = req.body.email; const pass = req.body.pass;
+    const fname = req.body.fname; const lname = req.body.lname;
+    const add1 = req.body.add1;   const add2 = req.body.add2;
+    const city = req.body.city;   const state = req.body.state;
+    const zip = req.body.zip; 
+
+    var user = { email, pass, fname, lname, adress: { add1, add2, city, state, zip} };
+    User.findOne( {email:req.body.email}, function(err, doc) {if (err) { console.log("err") ; } 
+        if (doc == null) {
+            User.collection.insertOne(user);
+            ct1product.find()
+            .then(results => {
+                res.render('index', { products: results, pageTitle: 'Home', pageName: 'Category 1'}); })
+            .catch(err => console.log(err));
+        } else {
+            res.render('singup', {pageTitle : 'Sign up', pageName: '', message: 'The same email adress already exists!'});
+        }
+});
+});
+
 module.exports = router;
