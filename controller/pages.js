@@ -10,6 +10,7 @@ const ct5product = require('../models/ct5');
 const ct6product = require('../models/ct6');
 const Cart = require('../models/cart');
 const WishList = require('../models/wish-list');
+const Register = require('../models/register');
 
 const router = express.Router();
 
@@ -226,7 +227,15 @@ router.get('/wish-list', (req, res) => {
 router.get('/contact', (req, res) => {
     Cart.find()
     .then (result => {
-        res.render('contact', {cart: result, pageTitle: 'Contact'});
+        res.render('contact', {cart: result, pageTitle: 'contact'});
+    })
+    .catch(err => console.log(err));
+});
+
+router.get('/register', (req, res) => {
+    Cart.find()
+    .then (result => {
+        res.render('register', {cart: result, pageTitle: 'register'});
     })
     .catch(err => console.log(err));
 });

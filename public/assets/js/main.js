@@ -18,4 +18,12 @@ $(document).ready(function () {
 			$(".qty").val(parseInt(now)+1);
 		}
 	});
+	$('input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], input[type=date], input[type=time], select, textarea').each(function (element, i) {
+		if ((element.value !== undefined && element.value.length > 0) || $(this).attr('placeholder') !== null) {
+			$(this).siblings('label').addClass('active');
+		}
+		else {
+			$(this).siblings('label').removeClass('active');
+		}
+	});
 });
