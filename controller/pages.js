@@ -411,14 +411,14 @@ router.get('/ct6/:prodId', (req, res) => {
 router.post('/register', (req, res) => {
     const email = req.body.email; const pass = req.body.pass;
     const fname = req.body.fname; const lname = req.body.lname;
-    const add1 = req.body.add1;   const add2 = req.body.add2;
+    const address1 = req.body.add1;   const address2 = req.body.add2;
     const city = req.body.city;   const state = req.body.state;
-    const zip = req.body.zip; 
+    const zipCode = req.body.zip; 
 
-    var register = { email, pass, fname, lname, adress: { add1, add2, city, state, zip} };
-    Register.findOne( {email:req.body.email}, function(err, doc) {if (err) { console.log("err") ; } 
+    var user = { email, pass, fname, lname, adress: { address1, address2, city, state, zipCode} };
+    User.findOne( {email:req.body.email}, function(err, doc) {if (err) { console.log("err") ; } 
         if (doc == null) {
-            User.collection.insertOne(register);
+            User.collection.insertOne(user);
             ct1product.find()
             .then(results => {
                 res.render('index', { products: results, pageTitle: 'Home', pageName: 'Category 1'}); })
@@ -426,7 +426,7 @@ router.post('/register', (req, res) => {
         } else {
             res.render('singup', {pageTitle : 'Sign up', pageName: '', message: 'The same email adress already exists!'});
         }
-});
+    });
 });
 
 module.exports = router;
