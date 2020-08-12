@@ -5,22 +5,48 @@
     <section>
       <div class="row">
         <div class="card col-6 offset-1">
-          <form action="#?" method="POST" id="billingForm">
+          <form action="/add-payment" method="POST" id="billingForm">
 
             <div class="row">
               <div class="col-md-6">
-                <h3>Billing Address</h3>
-                <label for="adr">Address</label>
-                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" class="checkout">
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" placeholder="New York" class="checkout">
+                <div class="form-row">
+                  <h3 class="text-center">Billing Address</h3>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6 md-form md-outline form-lg">
+                      
+                      <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" value="<%= user.firstName %>" required>
+                      <label for="firstName">First Name</label>
+                  </div>
+                  <div class="form-group col-md-6 md-form md-outline form-lg">
+                      <input type="text" class="form-control form-control-lg" id="lastName" name="lastName" value="<%= user.lastName %>" required>
+                      <label for="lastName">Last</label>
+                  </div>
+              </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12 md-form md-outline form-lg">
 
-                <div class="row">
-                  <div class="col-md-6">
-                    <label for="state"></i>State</label>
-                    <select class="form-control">
+                    <input type="text" class="form-control form-control-lg" id="address1" name="address1" value="<%= user.address.address1 %>" required>
 
-                      <option value="AL"></option>
+                    <label for="address1">Address</label>
+                  </div>
+                  <div class="form-group col-md-12 md-form md-outline form-lg">
+
+                    <input type="text" class="form-control form-control-lg" id="address2" name="address2" value="<%= user.address.address2 %>">
+
+                    <label for="address2">Apartment, studio, or floor</label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6 md-form md-outline form-lg">
+
+                    <input type="text" class="form-control form-control-lg" id="city" name="city"  value="<%= user.address.city %>"required>
+
+                    <label for="city">City</label>
+                  </div>
+                  <div class="form-group col-md-4 md-form md-outline form-lg">
+                    <select id="state" class="form-control form-control-lg" name="state" required>
+                      <option selected><%= user.address.state %></option>
                       <option value="AL">Alabama</option>
                       <option value="AK">Alaska</option>
                       <option value="AZ">Arizona</option>
@@ -72,20 +98,22 @@
                       <option value="WV">West Virginia</option>
                       <option value="WI">Wisconsin</option>
                       <option value="WY">Wyoming</option>
-
                     </select>
-
+                    <label for="state">State</label>
                   </div>
-                  <div class="col-md-6">
-                    <label for="zip">Zip</label>
-                    <input type="text" id="zip" name="zip" placeholder="10001" class="checkout" size="5">
+                  <div class="form-group col-md-2 md-form md-outline form-lg">
+
+                    <input type="text" class="form-control form-control-lg" id="zipCode" maxlength="5" minlength="5"
+                      size="5" name="zipCode" value="<%= user.address.zipCode %>" required>
+
+                    <label for="zipCode">Zip</label>
                   </div>
                 </div>
               </div>
 
               <div class="col-md-6">
-                <h3>Payment</h3>
-                <form action="">
+                <h3 class="text-center">Payment</h3>
+                <form action="" method="POST" id=>
                   <label for="fname">Accepted Cards</label>
                   <div class="icon-container">
                     <i class="fab fa-cc-visa" style="color:navy;"></i>
@@ -108,7 +136,7 @@
                   <div class="col-md-6">
                     <label for="expmonth">Exp</label>
                     <select id="expmonth" name="expmonth" class="checkout">
-                      <option value="0"></option>
+                      <option value="00"></option>
                       <option value="01">01</option>
                       <option value="02">02</option>
                       <option value="03">03</option>
@@ -125,16 +153,17 @@
                     /
                     <select id="expyear" name="expyear" class="checkout">
                       <option value="0"></option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                      <option value="2026">2026</option>
-                      <option value="2027">2027</option>
-                      <option value="2028">2028</option>
-                      <option value="2029">2029</option>
+                      <option value="20">2020</option>
+                      <option value="21">2021</option>
+                      <option value="22">2022</option>
+                      <option value="23">2023</option>
+                      <option value="24">2024</option>
+                      <option value="25">2025</option>
+                      <option value="26">2026</option>
+                      <option value="27">2027</option>
+                      <option value="28">2028</option>
+                      <option value="29">2029</option>
+                      <option value="30">2030</option>
                     </select>
                   </div>
                   <div class="col-md-6">
@@ -162,26 +191,26 @@
           <h4 class="pt-3">Cart
             <span class="price" style="color:black">
               <i class="fa fa-shopping-cart"></i>
-              <b><%= product.length %></b>
+              <b><%= cart.length %></b>
             </span>
           </h4>
           <table class="mt-3">
             <%  
                 let subTotal = 0;
-                for (let p of product) { 
+                for (let c of cart) { 
               %>
             <tr>
               <td>
-                <a href="#"><%= p.title %></a>
+                <a href="#"><%= c.title %></a>
               </td>
               <td></td>
               <td></td>
               <td>
-                <span class="price"></span>$<%= (p.price * p.quantity).toFixed(2) %></span>
+                <span class="price"></span>$<%= (c.price * c.quantity).toFixed(2) %></span>
               </td>
             </tr>
             <% 
-              subTotal = subTotal + (p.price * p.quantity); 
+              subTotal = subTotal + (c.price * c.quantity); 
               }
               var tax = subTotal * 0.0625;
               var total = subTotal + tax;

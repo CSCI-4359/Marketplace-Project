@@ -5,7 +5,7 @@
         <section>
             <div class="row">
                 <div class=" card col-md-6 offset-3">
-                    <form action="/add-registration" method="POST" id="registrationForm">
+                    <form action="/add-register" method="POST" id="registrationForm">
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <h3 class="text-center">Registration</h3>
@@ -13,31 +13,31 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 md-form md-outline form-lg">
-                                <input type="text" class="form-control form-control-lg" id="inputFirstName" name="firstName" required>
-                                <label for="inputFirstName">First Name</label>
+                                <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" required>
+                                <label for="firstName">First Name</label>
                             </div>
                             <div class="form-group col-md-6 md-form md-outline form-lg">
-                                <input type="text" class="form-control form-control-lg" id="inputLastName" name="lastName" required>
-                                <label for="inputLastName">Last</label>
+                                <input type="text" class="form-control form-control-lg" id="lastName" name="lastName" required>
+                                <label for="lastName">Last</label>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12 md-form md-outline form-lg">
-                                <input type="text" class="form-control form-control-lg" id="inputAddress" name="address1" required>
-                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control form-control-lg" id="address1" name="address1" required>
+                                <label for="address1">Address</label>
                             </div>
                             <div class="form-group col-md-12 md-form md-outline form-lg">
-                                <input type="text" class="form-control form-control-lg" id="inputAddress2" name="address2" required>
-                                <label for="inputAddress2">Apartment, studio, or floor</label>
+                                <input type="text" class="form-control form-control-lg" id="address2" name="address2">
+                                <label for="address2">Apartment, studio, or floor</label>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 md-form md-outline form-lg">
-                                <input type="text" class="form-control form-control-lg" id="inputCity" name="city" required>
-                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control form-control-lg" id="city" name="city" required>
+                                <label for="city">City</label>
                             </div>
                             <div class="form-group col-md-4 md-form md-outline form-lg">
-                                <select id="inputState" class="form-control form-control-lg" name="state" required>
+                                <select id="state" class="form-control form-control-lg" name="state" required>
                                     <option selected> </option>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
@@ -91,21 +91,21 @@
                                     <option value="WI">Wisconsin</option>
                                     <option value="WY">Wyoming</option>
                                 </select>
-                                <label for="inputState">State</label>
+                                <label for="state">State</label>
                             </div>
                             <div class="form-group col-md-2 md-form md-outline form-lg">
-                                <input type="text" class="form-control form-control-lg" id="inputZip" maxlength="5" minlength="5" size="5" name="zipCode" required>
-                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control form-control-lg" id="zipCode" maxlength="5" minlength="5" size="5" name="zipCode" required>
+                                <label for="zipCode">Zip</label>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 md-form md-outline form-lg">
-                                <input type="email" class="form-control form-control-lg" id="inputEmail" required>
-                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                                <label for="email">Email</label>
                             </div>
                             <div class="form-group col-md-6 md-form md-outline form-lg">
-                                <input type="password" class="form-control-lg" id="inputPassword" required>
-                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control-lg" id="password" name="password" required>
+                                <label for="password">Password</label>
                             </div>
                         </div>
                         <div class="form-row">
