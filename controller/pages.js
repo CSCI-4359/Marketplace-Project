@@ -12,6 +12,7 @@ const Cart = require('../models/cart');
 const WishList = require('../models/wish-list');
 const User = require('../models/user');
 const cart = require('../models/cart');
+const Order = require('../models/order');
 
 const router = express.Router();
 
@@ -443,7 +444,7 @@ router.post('/add-register', (req, res) => {
                 .then(result => {
                     res.render('checkout', {
                         product: result,
-                        cart: cart,
+                        cart: result,
                         pageTitle: 'Checkout'
                     });
                 })
@@ -515,6 +516,76 @@ router.get('/checkout', (req, res) => {
                         user: result,
                         cart: cart,
                         pageTitle: 'Checkout'
+                    });
+                })
+                .catch(err => console.log(err));
+        }
+    });
+});
+
+router.post('/add-order', (req, res) => {
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
+    const address1 = req.body.address1;
+    const address2 = req.body.address2;
+    const city = req.body.city;
+    const state = req.body.state;
+    const zipCode = req.body.zipCode;
+    const creditCard = req.body.creditCard;
+    const cardName = req.body.cardName;
+    const cardNumber = req.body.cardNumber
+    const expirationMonth = req.body.expirationMonth;
+    const expirationYear = req.body.expirationYear;
+    const cvv = req.body.cvv;
+    var order = {
+        shipping: {
+            firstName,
+            lastName,
+            address: {
+                address1,
+                address2,
+                city,
+                state,
+                zipCode
+            },
+        },
+        billing: {
+            firstName,
+            lastName,
+            address: {
+                address1,
+                address2,
+                city,
+                state,
+                zipCode
+            },
+        },
+        card: {
+            creditCard,
+            cardNumber,
+            expiration: {
+                expirationMonth,
+                expirationYear
+            },
+            cvv
+        }
+    }
+    Order.collection.insertOne(order);
+    Cart.deleteMany({}, function (err, doc) {
+        if (err) {
+            console.log(err);
+        }
+    });
+    Cart.find({}, function (err, cart) {
+        if (err) {
+            console.log(err);
+        } else {
+            User.find()
+                .then(result => {
+                    res.render('order-processed', {
+                        order: result,
+                        cart: cart,
+                        pageTitle: 'Order Processed'
                     });
                 })
                 .catch(err => console.log(err));
@@ -732,22 +803,52 @@ router.get('/ct6/:prodId', (req, res) => {
 });
 
 router.post('/register', (req, res) => {
-    const email = req.body.email; const pass = req.body.pass;
-    const fname = req.body.fname; const lname = req.body.lname;
-    const address1 = req.body.add1;   const address2 = req.body.add2;
-    const city = req.body.city;   const state = req.body.state;
-    const zipCode = req.body.zip; 
+    const email = req.body.email;
+    const pass = req.body.pass;
+    const fname = req.body.fname;
+    const lname = req.body.lname;
+    const address1 = req.body.add1;
+    const address2 = req.body.add2;
+    const city = req.body.city;
+    const state = req.body.state;
+    const zipCode = req.body.zip;
 
-    var user = { email, pass, fname, lname, adress: { address1, address2, city, state, zipCode} };
-    User.findOne( {email:req.body.email}, function(err, doc) {if (err) { console.log("err") ; } 
+    var user = {
+        email,
+        pass,
+        fname,
+        lname,
+        adress: {
+            address1,
+            address2,
+            city,
+            state,
+            zipCode
+        }
+    };
+    User.findOne({
+        email: req.body.email
+    }, function (err, doc) {
+        if (err) {
+            console.log("err");
+        }
         if (doc == null) {
             User.collection.insertOne(user);
             ct1product.find()
-            .then(results => {
-                res.render('index', { products: results, pageTitle: 'Home', pageName: 'Category 1'}); })
-            .catch(err => console.log(err));
+                .then(results => {
+                    res.render('index', {
+                        products: results,
+                        pageTitle: 'Home',
+                        pageName: 'Category 1'
+                    });
+                })
+                .catch(err => console.log(err));
         } else {
-            res.render('singup', {pageTitle : 'Sign up', pageName: '', message: 'The same email adress already exists!'});
+            res.render('singup', {
+                pageTitle: 'Sign up',
+                pageName: '',
+                message: 'The same email adress already exists!'
+            });
         }
     });
 });

@@ -1,0 +1,194 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+<div class="wrapper">
+  <div id="content" class="mt-5 mb-5" style="width: 100%;">
+    <section>
+      <div class="row">
+        <form action="/order" method="POST" id="orderedForm"></form>
+        <div class="card col-6 offset-1">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th class="text-center">Quantity</th>
+                <th class="text-center">Price</th>
+                <th class="text-center">Total</th>
+                <th> </th>
+                <th> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <%  let subTotal = 0; 
+                      for (let c of cart) { 
+              %>
+              <tr>
+                <td class="col-sm-8 col-md-6">
+                  <div class="media">
+
+                    <a class="thumbnail pull-left" href="/assets/img/products/<%= c.img %>"> <img class="media-object"
+                        src="/assets/img/products/<%= c.img %>" alt="<%= c.title %>"
+                        style="width: 72px; height: 72px;"></a>
+
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="#"><%= c.title %></a></h4>
+                      <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="col-sm-1 col-md-1 text-center">
+                  <a href="/decrease/<%= c.id %>">
+                    <i class="fas fa-chevron-down fa-xs border-secondary-color text-secondary-color"></i>
+                  </a>
+                  <input class="text-center" value="<%= c.quantity %>" size="1" />
+                  <a href="/increase/<%= c.id %>">
+                    <i class="fas fa-chevron-up fa-xs border-secondary-color text-secondary-color"></i>
+                  </a>
+                </td>
+                <td class="col-sm-1 col-md-1 text-center"><strong>$<%= c.price %></strong></td>
+                <td class="col-sm-1 col-md-1 text-center"><strong>$<%= (c.quantity * c.price).toFixed(2) %></strong>
+                </td>
+                <td class="col-sm-1 col-md-1">
+                  <form action="/<%= c.id %>?_method=Delete" method="POST" id="removeButton">
+                    <button type="submit"
+                      class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-secondary-color text-secondary-color hover-border-primary-color hover-text-primary-color">
+                      <span class="glyphicon glyphicon-remove"></span> Remove
+                    </button>
+                  </form>
+                </td>
+              </tr>
+              <%  subTotal = subTotal + (c.quantity * c.price);
+                  }   
+                      var tax = 0;
+                      var total = 0;
+                      tax = subTotal * 0.0625;
+                      total = subTotal + tax; 
+                  %>
+              <tr>
+                <td>   </td>
+                <td>   </td>
+                <td>
+                  <h5>Subtotal</h5>
+                </td>
+
+                <td class="text-right">
+                  <h5><strong>$<%= subTotal.toFixed(2) %></strong></h5>
+                </td>
+              </tr>
+              <tr>
+                <td>   </td>
+                <td>   </td>
+                <td>
+                  <h5>Estimated tax</h5>
+                </td>
+                <td class="text-right">
+                  <h5><strong>$<%= tax.toFixed(2) %></strong></h5>
+                </td>
+                <td>   </td>
+                <td>   </td>
+              </tr>
+              <tr>
+                <td>   </td>
+                <td>   </td>
+                <td>
+                  <h3>Total</h3>
+                </td>
+                <td class="text-right">
+                  <h3><strong>$<%= total.toFixed(2) %></strong></h3>
+                </td>
+                <td>   </td>
+                <td>   </td>
+              </tr>
+
+              <tr>
+                <td>   </td>
+                <td>   </td>
+                <td>
+                  <a type="button" href="/"
+                    class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-tertiary-color text-tertiary-color hover-border-quaternary-color hover-text-quaternary-color">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                  </a>
+                </td>
+                <td>
+                  <a type="button" href="/checkout"
+                    class="btn btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-quaternary-color text-quaternary-color hover-border-tertiary-color hover-text-tertiary-color">
+                    Checkout <span class="glyphicon glyphicon-play"></span>
+                  </a>
+                </td>
+                <td>   </td>
+                <td>   </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card col-md-3 offset-1">
+          <table class="mt-3">
+            <tr>
+              <th colspan="2" class="text-center">Shipping Address</th>
+            </tr>
+            <tr>
+              <th>Name:</th>
+              <td><%= order[0].firstName %> <%= order[0].lastName</td>
+            </tr>
+            <tr>
+              <th rowspan="2">Address:</th>
+              <td><%= order[0].address.address1 %> <%= order[0].address.address2 %></td>
+            </tr>
+            <tr>
+              <td><%= order[0].address.city %>, <%= order[0].address.state %> <%= order[0].address.zipCode %></td>
+            </tr>
+          </table>
+          <hr>
+          <table class="mt-3">
+            <tr>
+              <th colspan="2" class="text-center">Billing Address</th>
+            </tr>
+            <tr>
+              <th>Name:</th>
+              <td><%= order[0].firstName %> <%= order[0].lastName</td>
+            </tr>
+            <tr>
+              <th rowspan="2">Address:</th>
+              <td><%= order[0].address.address1 %> <%= order[0].address.address2 %></td>
+            </tr>
+            <tr>
+              <td><%= order[0].address.city %>, <%= order[0].address.state %> <%= order[0].address.zipCode %></td>
+            </tr>
+          </table>
+          <hr>
+          <table class="mt-3">
+            <tr>
+              <th colspan="2" class="text-center">Shipping Address</th>
+            </tr>
+            <tr>
+              <th>Card Holder:</th>
+              <td><%= order[0].cardName %></td>
+            </tr>
+            <tr>
+              <th>Card Number:</th>
+              <td><%= order[0].cardNumber %></td>
+            </tr>
+            <tr>
+              <th>Expiration:</th>
+              <td><%= order[0].expirationMonth %> / <%= order[0].expirationYear %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="row mt-3 mb-3">
+        <div class="col-6">
+          <label><input type="checkbox" checked="checked" name="sameadr">Shipping address same as billing</label>
+        </div>
+        <div class="col-6">
+          <button
+            class="btn text-center btn-outline-primary btn-md btn-rounded btn-navbar waves-effect waves-light border-quaternary-color text-quaternary-color hover-border-tertiary-color hover-text-tertiary-color">Confirm
+            Order</button>
+        </div>
+      </div>
+      </form>
+    </section>
+  </div>
+</div>
+<%- include('layouts/footer.ejs') %>

@@ -1,0 +1,17 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+<div class="wrapper">
+    <div id="content" class="mt-5 mb-5" style="width: 100%;">
+        <section>
+            <div class="row">
+                <div class="card col-8 offset-2" style="height: 60vh;">
+                    <h1 class="text-center mt-4"><b>Your Order Has Been Processed</b></h1>
+                    <hr>
+                    <h3 class="text-center mt-4"><b>Your order number is:</b></h3>
+                    <h4 class="text-center"><%= order[0]._id %></h4>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<%- include('layouts/footer.ejs') %>
