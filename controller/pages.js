@@ -571,21 +571,22 @@ router.post('/add-order', (req, res) => {
         }
     }
     Order.collection.insertOne(order);
+    /*
     Cart.deleteMany({}, function (err, doc) {
         if (err) {
             console.log(err);
         }
-    });
+    });*/
     Cart.find({}, function (err, cart) {
         if (err) {
             console.log(err);
         } else {
             User.find()
                 .then(result => {
-                    res.render('order-processed', {
+                    res.render('order-form', {
                         order: result,
                         cart: cart,
-                        pageTitle: 'Order Processed'
+                        pageTitle: 'Order Form'
                     });
                 })
                 .catch(err => console.log(err));
